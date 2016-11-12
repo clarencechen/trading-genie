@@ -53,8 +53,7 @@ function setUpSocket() {
 					    	parseString(str, function (err, result) {
 								if(err)
 									console.log(JSON.stringify(err))
-								console.log(JSON.stringify(result.ArrayOfQuoteResults.QuoteResults))
-								string = result.ArrayOfQuoteResults.QuoteResults.Quotes.forEach(function(e, i) {
+								string = result.ArrayOfQuoteResults.QuoteResults[0].Quotes[0].forEach(function(e, i) {
 									console.log('working on quote ' + i)
 									price[i] = +(e.BidPrice)
 									time[i] = e.endTime
