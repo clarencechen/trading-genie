@@ -13,6 +13,10 @@ $(document).ready(function() {
 		{
 			console.log('staying alive')
 		}
+		else if(event.data == 'pong')
+		{
+			console.log('still staying alive')	
+		}
 		else
 		{
 			console.log(event.data)

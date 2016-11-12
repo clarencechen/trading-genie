@@ -90,7 +90,7 @@ function setUpSocket() {
 		})
 		ws.on("open", function() {
 			setInterval(function timeout() {
-				ws.send('ping')
+				ws.send('pong')
 			}, 50)
 		})
 		ws.on("close", function() {
