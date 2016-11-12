@@ -63,7 +63,7 @@ function setUpSocket() {
 									time[stock.Symbol] = []
 									stock.Quotes[0].Quote.forEach(function(e, i) {
 										price[stock.Symbol][i] = +(e.BidPrice)
-										time[stock.Symbol][i] = e.EndTime
+										time[stock.Symbol][i] = e.EndTime[0]
 									})
 								})
 							})
