@@ -43,7 +43,7 @@ function setUpSocket() {
 						}
 					}
 					var req = http.request(options, function(res) {
-					    	console.log("In callback")
+					    	console.log("In callback" + JSON.stringify(res))
 					    	price = []
 					    	var xmldoc = $.parseXML(res)
 					    	xml = $(xmlDoc).find('BidPrice').each(function(i, e){
