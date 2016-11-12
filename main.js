@@ -57,7 +57,7 @@ function setUpSocket() {
 				}
 			}
 				setTimeout(function timeout() {
-    			ws.send('ping', {mask: true})}, 500)
+    			ws.send('ping')}, 50)
 		})
 		ws.on("close", function() {
 			console.log("websocket connection closed")
