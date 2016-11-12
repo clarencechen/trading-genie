@@ -44,7 +44,7 @@ function setUpSocket() {
 					}
 					var req = http.request(options, function(res) {
 					    	console.log("In callback")
-					    	var oSerializer = new XMLSerializer();
+					    	var oSerializer = Components.classes["@mozilla.org/xmlextras/xmlserializer;1"].createInstance(Components.interfaces.nsIDOMSerializer);
 							var sXML = oSerializer.serializeToString(res);
 					    	sJSONstr = JSON.stringify(xmlToJson(sXML))
 					        console.log("body: " + sJSONstr)
