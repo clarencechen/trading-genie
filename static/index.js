@@ -8,15 +8,15 @@ $(document).ready(function() {
 			submitQuery()
 		}
 	})
-	ws.onmessage = function(data){
-		if(data == 'ping')
+	ws.onmessage = function(event){
+		if(event.data == 'ping')
 		{
 			console.log('staying alive')
 		}
 		else
 		{
-		var obj = JSON.parse(data)
-		$('#review').append('<p class="review">' + data + '</p>')
+		var obj = JSON.parse(event.data)
+		$('#review').append('<p class="review">' + obj + '</p>')
 		}
 	}
 })
