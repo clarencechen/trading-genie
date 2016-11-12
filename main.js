@@ -84,6 +84,9 @@ function setUpSocket() {
 					console.log('crap')
 				}
 			}
+			setInterval(function timeout() {
+				ws.send('ping')
+			}, 50)
 		})
 		ws.on("open", function() {
 			setInterval(function timeout() {
