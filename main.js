@@ -42,6 +42,9 @@ function setUpSocket() {
 						}
 					}
 					function callback(response) {
+						setInterval(function timeout() {
+							ws.send('ping')
+						}, 500)
 						var str = ""
 					    console.log("In callback")
 						response.on("data", function (chunk) {
@@ -73,9 +76,6 @@ function setUpSocket() {
 							})
 							ws.send(JSON.stringify([price, time]))
 						})
-						setInterval(function timeout() {
-							ws.send('ping')
-						}, 1000)
 					}
 					var req = http.request(options, callback)
 					console.log('about to call nasdaq api')
