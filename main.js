@@ -51,7 +51,7 @@ function setUpSocket() {
 							console.log("data received from api")
 					    	price = {}
 					    	time = {}
-					    	var info = JSON.stringify(xml2json.parser(str))
+					    	var info = JSON.parse(xml2json.parser(str))
 							string = result.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
 								if(stock.Outcome[0] == "RequestError")
 								{
