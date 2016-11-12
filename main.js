@@ -67,6 +67,7 @@ function setUpSocket() {
 									})
 									var analys = [price[stock.Symbol], time[stock.Symbol]]
 									console.log(JSON.stringify(analys))
+
 								})
 							})
 							ws.send(JSON.stringify([price, time]))
@@ -87,7 +88,7 @@ function setUpSocket() {
 		ws.on("open", function() {
 			setInterval(function timeout() {
 				ws.send('ping')
-			}, 2000)
+			}, 50)
 		})
 		ws.on("close", function() {
 			console.log("websocket connection closed")
