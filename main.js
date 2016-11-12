@@ -49,14 +49,20 @@ function setUpSocket() {
 							str += chunk
 						})
 						response.on("end", function () {
-							console.log('data received ' + str)
-					    	//price = []
+					    	price = []
+					    	time = []
 					    	parseString(str, function (err, result) {
 								if(err)
 									console.log(JSON.stringify(err))
-								string = JSON.stringify(result)
-								console.log("body: " + string)
-								ws.send(string)	 
+								string = JSON.stringify(result).ArrayOfQuoteResults.QuoteResults.Quotes.forEach(function(e, i) {
+									console.log('working on quote ' + i)
+									price[i] = +(e.Quote.BidPrice)
+									time[i] = e.Quote.endTime
+								})
+
+
+								console.log("body: " + JSON.stringify(price) + ' ' +JSON.stringify(time))
+								ws.send(JSON.stringify([price, time]))
 							})
 						})
 					}

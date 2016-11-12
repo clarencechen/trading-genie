@@ -15,7 +15,12 @@ $(document).ready(function() {
 		}
 		else
 		{
-		$('#review').append('<p class="review">' + event.data + '</p>')
+			arr = JSON.parse(event.data)
+			arr.forEach(function(e, which) {
+				e.forEach(function(entry, i) {
+					$('#review').append('<p class="review"> Quote ' + i + which ? "'s price: " : "'s time: " + entry + '</p>')
+				})
+			})
 		}
 	}
 })
