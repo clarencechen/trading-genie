@@ -52,7 +52,7 @@ function setUpSocket() {
 					    	price = {}
 					    	time = {}
 					    	var info = JSON.parse(xml2json.parser(str))
-							string = result.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
+							info.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
 								if(stock.Outcome[0] == "RequestError")
 								{
 									console.log(stock.Message[0])
