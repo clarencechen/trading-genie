@@ -48,21 +48,24 @@ function setUpSocket() {
 							str += chunk
 						})
 						response.on("end", function () {
-					    	price = []
-					    	time = []
+					    	price = {}
+					    	time = {}
 					    	parseString(str, function (err, result) {
 								if(err)
 									console.log(JSON.stringify(err))
-								string = result.ArrayOfQuoteResults.QuoteResults[0].Quotes[0].Quote.forEach(function(e, i) {
-									price[i] = +(e.BidPrice)
-									time[i] = e.EndTime
+								string = result.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
+									price[stock.Symbol] = []
+									time[stock.Symbol] = []
+									stock.Quotes[0].Quote.forEach(function(e, i) {
+										price[stock.Symbol][i] = +(e.BidPrice)
+										time[stock.Symbol][i] = e.EndTime
+									})
 								})
-
-
-								console.log("body: " + JSON.stringify(price) + ' ' +JSON.stringify(time))
-								ws.send(JSON.stringify([price, time]))
 							})
-						})
+							console.log("body: " + JSON.stringify(price) + ' ' +JSON.stringify(time))
+							ws.send(JSON.stringify([price, time]))
+							})
+						}
 					}
 					var req = http.request(options, callback)
 					console.log('about to call nasdaq api')
