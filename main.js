@@ -65,6 +65,8 @@ function setUpSocket() {
 										price[stock.Symbol][i] = +(e.BidPrice)
 										time[stock.Symbol][i] = e.EndTime[0]
 									})
+									var analys = [price[stock.Symbol], time[stock.Symbol]]
+									console.log(JSON.stringify(analys))
 								})
 							})
 							ws.send(JSON.stringify([price, time]))
