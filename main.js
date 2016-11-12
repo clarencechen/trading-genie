@@ -46,15 +46,17 @@ function setUpSocket() {
 						var str = ""
 					    console.log("In callback")
 						response.on("data", function (chunk) {str += chunk})
-						response.on("end", function () {console.log('data received')})
-					    price = []
-					    var xmldoc = $.parseXML(str)
-					    xml = $(xmlDoc).find('BidPrice').each(function(i, e){
-					    	price[i] = e.text();
-					    })
-					    str = JSON.stringify(price)
-						console.log("body: " + str)
-						ws.send(str)
+						response.on("end", function () {
+							console.log('data received')
+					    	price = []
+					    	var xmldoc = $.parseXML(str)
+					    	xml = $(xmlDoc).find('BidPrice').each(function(i, e){
+					    		price[i] = e.text();
+					    	})
+					    	str = JSON.stringify(price)
+							console.log("body: " + str)
+							ws.send(str)
+						})
 					}
 					var req = http.request(options, callback)
 					console.log('about to call nasdaq api')
