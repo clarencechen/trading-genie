@@ -68,8 +68,10 @@ function setUpSocket() {
 								while (arr.length > 0)
 								{
 									console.log(arr.length)
-									for (var i = 0; i < Math.min(arr.length, 100); i++) {
+									for (var i = 0; i <  100; i++) {
 										datum = arr.splice(0, 1)[0]
+										if(!datum)
+											break;
 										price[sym][i] = +(datum.childNamed('BidPrice').val)
 										time[sym][i] = datum.childNamed('EndTime').val
 									}
