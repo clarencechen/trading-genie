@@ -68,9 +68,11 @@ function setUpSocket() {
 									ws.send('stock::' + stock.Symbol)
 									while (stock.Quotes[0].Quote.length > 0)
 									{
+										console.log(stock.Quotes[0].Quote.length)
 										for (var i = 0; i < min(stock.Quotes[0].Quote.length, 100); i++) {
-											price[stock.Symbol][i] = +(stock.Quotes[0].Quote.splice(0).BidPrice)
-											time[stock.Symbol][i] = stock.Quotes[0].Quote.splice(0).EndTime[0]
+											datum = stock.Quotes[0].Quote.splice(0)
+											price[stock.Symbol][i] = +(datum.BidPrice)
+											time[stock.Symbol][i] = datum.EndTime[0]
 										}
 										var analys = [price[stock.Symbol], time[stock.Symbol]]
 										console.log(JSON.stringify(analys))
