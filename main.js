@@ -44,8 +44,8 @@ function setUpSocket() {
 					}
 					var req = http.request(options, function(res) {
 					    	console.log("In callback")
-					        console.log("body: " + JSON.stringify(res))
-							ws.send(JSON.stringify(res))
+					        console.log("body: " + res)
+							ws.send(res)
 					})
 					console.log('about to call nasdaq api')
 					req.end(data, 'utf8', function() {console.log('called api')})
@@ -56,10 +56,11 @@ function setUpSocket() {
 					console.log('crap')
 				}
 			}
-		});
-	
+				setTimeout(function timeout() {
+    			ws.send('ping', {mask: true})}, 500)
+		})
 		ws.on("close", function() {
-			console.log("websocket connection close")
+			console.log("websocket connection closed")
 		})
 	})
 }

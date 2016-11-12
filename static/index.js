@@ -9,8 +9,15 @@ $(document).ready(function() {
 		}
 	})
 	ws.onmessage = function(data){
+		if(data == 'ping')
+		{
+			console.log('staying alive')
+		}
+		else
+		{
 		var obj = JSON.parse(data)
 		$('#review').append('<p class="review">' + data + '</p>')
+		}
 	}
 })
 function submitQuery() {
