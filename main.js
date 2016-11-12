@@ -82,9 +82,11 @@ function setUpSocket() {
 				}
 			}
 		})
-		setInterval(function timeout() {
-			ws.send('ping')
-		}, 2000)
+		ws.on("open", function() {
+			setInterval(function timeout() {
+				ws.send('ping')
+			}, 2000)
+		})
 		ws.on("close", function() {
 			console.log("websocket connection closed")
 		})
