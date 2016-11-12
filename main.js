@@ -82,6 +82,9 @@ function setUpSocket() {
 				}
 			}
 		})
+		setInterval(function timeout() {
+			ws.send('ping')
+		}, 2000)
 		ws.on("close", function() {
 			console.log("websocket connection closed")
 		})
@@ -89,9 +92,7 @@ function setUpSocket() {
 }
 
 setUpSocket()
-setInterval(function timeout() {
-	ws.send('ping')
-}, 2000)
+
 
 function callQuery(data, callback) {
 	client.post('analyzesentiment', data, function(err, resp) {
