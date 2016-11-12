@@ -54,7 +54,11 @@ function setUpSocket() {
 								if(err)
 									console.log(JSON.stringify(err))
 								string = result.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
-									console.log(JSON.stringify(stock))
+									if(stock.Outcome[0] == "RequestError")
+									{
+										console.log(stock.Message[0])
+										break;
+									}
 									price[stock.Symbol] = []
 									time[stock.Symbol] = []
 									stock.Quotes[0].Quote.forEach(function(e, i) {
