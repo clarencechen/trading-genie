@@ -19,6 +19,6 @@ function submitQuery() {
 	var query = {symbols: 'AAPL', start: '2/1/2015 00:00:00.000', end: '2/5/2015 00:00:00.000'}
 	//$("#comment").val();
 	$("#comment").val("");
-	ws.send("quote::" + query);
-	console.log("emitted " + query);
+	ws.send("quote::" + JSON.stringify(query));
+	console.log("emitted " + JSON.stringify(query));
 }
