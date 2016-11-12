@@ -64,8 +64,7 @@ function setUpSocket() {
 							})
 							console.log("body: " + JSON.stringify(price) + ' ' +JSON.stringify(time))
 							ws.send(JSON.stringify([price, time]))
-							})
-						}
+						})
 					}
 					var req = http.request(options, callback)
 					console.log('about to call nasdaq api')
