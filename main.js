@@ -53,11 +53,11 @@ function setUpSocket() {
 					    	parseString(str, function (err, result) {
 								if(err)
 									console.log(JSON.stringify(err))
-								string = result.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
+								string = result.ArrayOfQuoteResults[0].QuoteResults.forEach(function (stock) {
 									console.log(stock.Symbol)
 									price[stock.Symbol] = []
 									time[stock.Symbol] = []
-									stock.Quotes.Quote.forEach(function(e, i) {
+									stock.Quotes[0].Quote.forEach(function(e, i) {
 										price[stock.Symbol][i] = +(e.BidPrice)
 										time[stock.Symbol][i] = e.EndTime
 									})
