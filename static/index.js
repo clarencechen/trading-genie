@@ -27,7 +27,7 @@ $(document).ready(function() {
 function submitQuery() {
 	if($("#comment").val() == "")
 		return "";
-	var query = {symbols: 'AAPL', start: '11/11/2016 09:30:00.000', end: '11/11/2016 09:35:00.000', markets: 'Q, B'}
+	var query = {symbols: $('#symbols').val(), start: $('#start').val().replace(/T/g, ' ').replace(/-/g, '/'), end: $('#end').val().replace(/T/g, ' ').replace(/-/g, '/'), markets: $('#markets').val()}
 	//$("#comment").val();
 	$("#comment").val("");
 	ws.send("quote::" + JSON.stringify(query));
