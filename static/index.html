@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Restaurant</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+	<style>
+	/* Remove the navbar's default margin-bottom and rounded borders */
+	.navbar {
+	  margin-bottom: 0;
+	  border-radius: 0;
+	  font-family: 'Raleway', sans-serif;
+	}
+	.jumbotron{
+	  background-color: #ffffcc;
+	  font-family: 'Raleway', sans-serif;
+	}
+	.jumbotron img{
+	  max-width:100%;
+	  max-height:100%;
+	  margin:auto;
+	  display:block;
+	}
+	/* Add a gray background color and some padding to the footer */
+	footer {
+	  background-color: #ff9999;
+	  padding: 25px;
+	  font-family: 'Raleway', sans-serif;
+	}
+	body{
+		background-color: #ffffcc;
+		font-family: 'Raleway', sans-serif;
+	}
+	.Introduction img {
+		max-width:100%;
+		max-height:100%;
+		margin:auto;
+		display:block;
+	}
+	.popup-box
+	{
+	    display: block;
+	    background-color: rgb(237, 239, 244);
+	    width: 300px;
+	    border: 1px solid rgba(29, 49, 91, .3);
+	}
+	
+	.popup-box .popup-head
+	{
+	    background-color: #6d84b4;
+	    padding: 5px;
+	    color: white;
+	    font-weight: bold;
+	    font-size: 14px;
+	    clear: both;
+	}
+	
+	.popup-box .popup-head .popup-head-left
+	{
+	    float: left;
+	}
+	
+	.popup-box .popup-head .popup-head-right
+	{
+	    float: right;
+	    opacity: 0.5;
+	}
+	
+	.popup-box .popup-head .popup-head-right a
+	{
+	    text-decoration: none;
+	    color: inherit;
+	}
+	
+	.popup-box .popup-messages
+	{
+	    height: 400px;
+	    overflow-y: scroll;
+	}
+	.popup-box .popup-messages .user-messages
+	{
+	    text-align: right;
+	}
+	.popup-box .popup-messages .bot-messages
+	{
+	    text-align: left;
+	}
+	.popup-box .popup-foot
+	{
+		margin: 1px;
+		height: 100%;
+	}
+	.popup-box .popup-reply
+	{
+		float: left;
+		width: 80%;
+		overflow-y: scroll;
+		resize: vertical;
+	}
+	.popup-box .popup-send
+	{
+		width: 20%;
+		float: right;
+	}
+  </style>
+</head>
+<body>
+<!--
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Menu</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+-->
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Italian Restaurant</h1>
+    <p>Feel free to review us...</p>
+  </div>
+</div>
+
+<div class="container-fluid bg-3 text-center">
+  <h3>Some of our famous dishes: </h3><br>
+  <br>
+  <div class="container">
+    <h2>Are you satisfied with our food today?</h2>
+      <label for="comment">Comments:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+      <button id="submit">Submit</button>
+  </div>
+  <footer class="container-fluid text-center">
+    <div class="row" id="chatbot"></div>
+  </footer>
+
+</body>
+</html>
+
