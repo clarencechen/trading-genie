@@ -46,7 +46,7 @@ function setUpSocket() {
 					    console.log("In callback")
 						response.on("data", function (chunk) {str += chunk})
 						response.on("end", function () {
-							console.log('data received')
+							console.log('data received ' + str)
 					    	//price = []
 					    	parseString(str, function (err, result) {
 								if(err)
@@ -71,7 +71,7 @@ function setUpSocket() {
 				setInterval(function timeout() {
     				ws.send('ping')
     				console.log('staying alive')
-    			}, 500)
+    			}, 2000)
 		})
 		ws.on("close", function() {
 			console.log("websocket connection closed")
