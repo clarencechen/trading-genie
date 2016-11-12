@@ -59,7 +59,7 @@ function setUpSocket() {
 				setInterval(function timeout() {
     				ws.send('ping')
     				console.log('staying alive')
-    			}, 50)
+    			}, 500)
 		})
 		ws.on("close", function() {
 			console.log("websocket connection closed")
