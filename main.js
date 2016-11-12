@@ -81,13 +81,13 @@ function setUpSocket() {
 					console.log('crap')
 				}
 			}
-				setInterval(function timeout() {
-    				ws.send('ping')
-    			}, 2000)
 		})
 		ws.on("close", function() {
 			console.log("websocket connection closed")
 		})
+		setInterval(function timeout() {
+			ws.send('ping')
+		}, 2000)
 	})
 }
 
