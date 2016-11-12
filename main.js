@@ -23,11 +23,9 @@ function setUpSocket() {
 		console.log("websocket connection open")
 		ws.on("message", function(data) {//data from webpage
 			console.log('received data')
-			var stuff = JSON.parse(data)
-			var id = stuff[0]
-			var symbols = stuff['symbols']
-			switch (id) {
-				case "quotes":
+			var stuff = JSON.parse(data.split("::")[1])
+			switch (data.split("::")[0]) {
+				case "quote":
 				{
 					var data = querystring.stringify({	'_Token' : '999AEED3D3454B599104F310E15B1CD4',
 										'Symbols' : stuff['symbols'],
