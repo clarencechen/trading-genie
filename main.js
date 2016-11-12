@@ -4,6 +4,7 @@ var querystring = require('querystring')
 var express = require('express')
 var http = require('http')
 var xmldoc = require("xmldoc")
+var Module = require('./cfuncs.out.js')
 var app = express()
 
 app.use('/', express.static(__dirname+"/static"))
@@ -26,6 +27,8 @@ function setUpSocket() {
 			switch (data.split("::")[0]) {
 				case "quote":
 				{
+					var low = stuff['low']
+					var high = stuff['high']
 					var data = querystring.stringify({	'_Token' : 'BC2B181CF93B441D8C6342120EB0C971',
 										'Symbols' : stuff['symbols'],
 										'StartDateTime' : stuff['start'],
@@ -65,6 +68,8 @@ function setUpSocket() {
 								time[sym] = []
 								ws.send('stock::' + sym)
 								arr = stock.childNamed('Quotes').childrenNamed('Quote')
+								Module.setLen(arr.length)
+								var j = 0
 								while (arr.length > 0)
 								{
 									console.log(arr.length)
@@ -76,13 +81,33 @@ function setUpSocket() {
 										time[sym][i] = datum.childNamed('EndTime').val
 									}
 									var analys = [price[sym], time[sym]]
-									console.log(JSON.stringify(analys))
+									if(analys.length === 100)
+									{
+										var pricepos = Module._malloc(8*analys.length)
+										//var timepos = Module._malloc(8*analys.length)
+										for(var i = 0; i < analys.length; i++)
+										{
+											Module.setValue(pricepos +8*i, analys[0][i], 'double')
+											//Module.setValue(timepos +8*i, analys[0][i], 'double')
+										}
+										Module.getInputArr(pricepos, j)
+										console.log(JSON.stringify(analys))
+									}
 									ws.send(JSON.stringify([price, time]))
 									price[sym] = []
 									time[sym] = []
+									j++;
 								}
 							})
 							ws.send('end')
+							LMApointer = Module.SMAlow(low)
+							HMApointer = Module.SMAhigh(high)
+							lavg = []
+							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
+								lavg[i -1] = Module.getValue(LMApointer +8*i, 'double')
+							ws.send("lavg::" +JSON.stringify(lavg))
+							Module.delArr()
+
 						})
 					}
 					var req = http.request(options, callback)

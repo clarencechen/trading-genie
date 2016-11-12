@@ -2,6 +2,7 @@ var host = location.origin.replace(/^http/, 'ws')
 var ws = new WebSocket(host);
 $(document).ready(function() {
 	var arr = [{},{}]
+	var lavg, havg = []
 	$("button#submit").click(submitQuery);
 	$("#comment").keypress(function(e){
 		if(e.which == 13) {
@@ -22,6 +23,10 @@ $(document).ready(function() {
 		{
 			arr.forEach(function(e) {e[event.data.split("::")[1] ]= []})	
 		}
+		else if(event.data.split("::")[0] == 'lavg')
+		{
+			lavg = JSON.parse(event.data.split("::")[1])	
+		}
 		else if(event.data == 'end')
 		{
 			arr.forEach(function(e, which) {
@@ -34,6 +39,7 @@ $(document).ready(function() {
 			})
 			arr = [{},{}]
 		}
+
 		else
 		{
 			arr.forEach(function(e, which) {
@@ -48,11 +54,13 @@ $(document).ready(function() {
 function submitQuery() {
 	if($("#comment").val() == "")
 		return "";
-	var query = {symbols: $('#symbols').val(), start: ($('#start').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), end: ($('#end').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), markets: 'B, Q'}
+	var query = {low: $('#low').val(), high: $('#high').val(), symbols: $('#symbols').val(), start: ($('#start').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), end: ($('#end').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), markets: 'B, Q'}
 	//$("#comment").val();
 	$('#symbols').val("");
 	$('#start').val("");
 	$('#end').val("");
+	$('#low').val("");
+	$('#high').val("");
 	ws.send("quote::" + JSON.stringify(query));
 	console.log("emitted " + JSON.stringify(query));
 }
