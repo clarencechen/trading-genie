@@ -70,7 +70,7 @@ function setUpSocket() {
 									{
 										console.log(stock.Quotes[0].Quote.length)
 										for (var i = 0; i < Math.min(stock.Quotes[0].Quote.length, 100); i++) {
-											datum = stock.Quotes[0].Quote.splice(0)
+											datum = stock.Quotes[0].Quote.splice(0, 1)
 											price[stock.Symbol][i] = +(datum.BidPrice)
 											time[stock.Symbol][i] = datum.EndTime[0]
 										}
