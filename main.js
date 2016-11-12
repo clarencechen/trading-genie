@@ -67,7 +67,6 @@ function setUpSocket() {
 									})
 								})
 							})
-							console.log("body: " + JSON.stringify(price) + ' ' +JSON.stringify(time))
 							ws.send(JSON.stringify([price, time]))
 						})
 					}
@@ -84,7 +83,6 @@ function setUpSocket() {
 			}
 				setInterval(function timeout() {
     				ws.send('ping')
-    				console.log('staying alive')
     			}, 2000)
 		})
 		ws.on("close", function() {

@@ -15,6 +15,7 @@ $(document).ready(function() {
 		}
 		else
 		{
+			console.log(event.data)
 			arr = JSON.parse(event.data)
 			arr.forEach(function(e, which) {
 				for(var stock in e)
