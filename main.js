@@ -45,11 +45,9 @@ function setUpSocket() {
 					var req = http.request(options, function(res) {
 					    
 
-					    res.on('response', function (resp) {
 					    	console.log("In callback")
-					        console.log("body: " + resp)
-							ws.send(resp)
-					    })
+					        console.log("body: " + res)
+							ws.send(res)
 					})
 					console.log('about to call nasdaq api')
 					req.write(data)
