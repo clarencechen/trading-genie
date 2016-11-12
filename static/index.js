@@ -20,7 +20,7 @@ $(document).ready(function() {
 		}
 		else if(event.data.split("::")[0] == 'stock')
 		{
-			arr.forEach(function(e) {event.data.split("::")[1] = []})	
+			arr.forEach(function(e) {e[event.data.split("::")[1] ]= []})	
 		}
 		else if(event.data == 'end')
 		{
