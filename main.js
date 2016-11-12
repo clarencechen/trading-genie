@@ -42,7 +42,6 @@ function setUpSocket() {
 						    'Content-Length': Buffer.byteLength(data, 'utf8')
 						}
 					}
-					console.log('about to call nasdaq api')
 					var req = http.request(options, function(res) {
 					    res.on('data', function (resp) {
 					    	console.log("In callback")
@@ -50,7 +49,9 @@ function setUpSocket() {
 							ws.send(resp)
 					    })
 					})
+					console.log('about to call nasdaq api')
 					req.write(data)
+					console.log('called api')
 					req.end()
 					break
 				}
