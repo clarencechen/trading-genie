@@ -10,8 +10,7 @@ $(document).ready(function() {
 	})
 	ws.onmessage = function(data){
 		var obj = JSON.parse(data)
-		else
-			$('#review').append('<p class="review">' + data + '</p>')
+		$('#review').append('<p class="review">' + data + '</p>')
 	}
 })
 function submitQuery() {
