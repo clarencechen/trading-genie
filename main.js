@@ -48,7 +48,7 @@ function setUpSocket() {
 						response.on("end", function () {
 							console.log('data received')
 					    	//price = []
-					    	parseString(str, {valueProcessors: [parseNumbers]}, function (err, result) {
+					    	parseString(str, function (err, result) {
 								str = JSON.stringify(result)
 								console.log("body: " + str)
 								ws.send(str)	 
