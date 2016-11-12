@@ -43,7 +43,9 @@ function setUpSocket() {
 						}
 					}
 					var req = http.request(options, function(res) {
-					    res.on('data', function (resp) {
+					    
+
+					    res.on('response', function (resp) {
 					    	console.log("In callback")
 					        console.log("body: " + resp)
 							ws.send(resp)
