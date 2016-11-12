@@ -57,7 +57,7 @@ function setUpSocket() {
 									if(stock.Outcome[0] == "RequestError")
 									{
 										console.log(stock.Message[0])
-										break;
+										return;
 									}
 									price[stock.Symbol] = []
 									time[stock.Symbol] = []
