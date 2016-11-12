@@ -1,0 +1,1092 @@
+<ArrayOfQuoteResults xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.nasdaqdod.com/services/v1/">
+<QuoteResults>
+<Outcome>Success</Outcome>
+<Identity>Request</Identity>
+<Delay>0.1715982</Delay>
+<Symbol>GOOG</Symbol>
+<StartTime>11/11/2016 09:30:00.000</StartTime>
+<EndTime>11/11/2016 09:30:25.000</EndTime>
+<Quotes>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:29:27.176</StartTime>
+<EndTime>11/11/2016 09:30:01.744</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>755.17</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:29:59.040</StartTime>
+<EndTime>11/11/2016 09:30:00.005</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>756.55</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:00.005</StartTime>
+<EndTime>11/11/2016 09:30:00.005</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>755.17</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:00.005</StartTime>
+<EndTime>11/11/2016 09:30:00.050</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>755.17</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.91</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:00.050</StartTime>
+<EndTime>11/11/2016 09:30:00.260</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>758.5</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:00.260</StartTime>
+<EndTime>11/11/2016 09:30:00.260</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.91</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:00.260</StartTime>
+<EndTime>11/11/2016 09:30:01.017</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>759</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.91</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.017</StartTime>
+<EndTime>11/11/2016 09:30:01.017</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.91</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.017</StartTime>
+<EndTime>11/11/2016 09:30:01.017</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.19</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.017</StartTime>
+<EndTime>11/11/2016 09:30:01.200</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.91</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.200</StartTime>
+<EndTime>11/11/2016 09:30:01.353</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.31</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.91</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.353</StartTime>
+<EndTime>11/11/2016 09:30:01.384</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.31</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.384</StartTime>
+<EndTime>11/11/2016 09:30:01.769</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.744</StartTime>
+<EndTime>11/11/2016 09:30:01.744</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.744</StartTime>
+<EndTime>11/11/2016 09:30:01.914</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.2</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.769</StartTime>
+<EndTime>11/11/2016 09:30:01.773</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.773</StartTime>
+<EndTime>11/11/2016 09:30:01.776</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.26</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.776</StartTime>
+<EndTime>11/11/2016 09:30:01.847</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.847</StartTime>
+<EndTime>11/11/2016 09:30:01.849</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.24</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.849</StartTime>
+<EndTime>11/11/2016 09:30:01.852</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.852</StartTime>
+<EndTime>11/11/2016 09:30:01.853</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.23</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.853</StartTime>
+<EndTime>11/11/2016 09:30:01.914</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.23</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.91</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.914</StartTime>
+<EndTime>11/11/2016 09:30:01.915</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.914</StartTime>
+<EndTime>11/11/2016 09:30:01.966</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.91</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.915</StartTime>
+<EndTime>11/11/2016 09:30:01.916</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.01</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.41</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.916</StartTime>
+<EndTime>11/11/2016 09:30:01.918</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.2</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.41</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.918</StartTime>
+<EndTime>11/11/2016 09:30:01.927</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.2</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.91</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.927</StartTime>
+<EndTime>11/11/2016 09:30:01.929</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.2</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.929</StartTime>
+<EndTime>11/11/2016 09:30:02.062</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:01.966</StartTime>
+<EndTime>11/11/2016 09:30:02.062</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.2</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.31</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.062</StartTime>
+<EndTime>11/11/2016 09:30:02.064</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.062</StartTime>
+<EndTime>11/11/2016 09:30:02.067</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.2</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.064</StartTime>
+<EndTime>11/11/2016 09:30:02.067</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.2</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.067</StartTime>
+<EndTime>11/11/2016 09:30:02.070</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.067</StartTime>
+<EndTime>11/11/2016 09:30:04.175</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.31</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.070</StartTime>
+<EndTime>11/11/2016 09:30:02.100</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.31</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.100</StartTime>
+<EndTime>11/11/2016 09:30:02.101</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.31</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>758.85</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.101</StartTime>
+<EndTime>11/11/2016 09:30:02.103</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.31</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.42</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.103</StartTime>
+<EndTime>11/11/2016 09:30:02.105</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.31</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:02.105</StartTime>
+<EndTime>11/11/2016 09:30:03.094</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.31</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>759</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:03.094</StartTime>
+<EndTime>11/11/2016 09:30:04.130</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.31</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.130</StartTime>
+<EndTime>11/11/2016 09:30:04.130</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.32</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.130</StartTime>
+<EndTime>11/11/2016 09:30:04.131</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.33</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.131</StartTime>
+<EndTime>11/11/2016 09:30:04.132</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.32</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.132</StartTime>
+<EndTime>11/11/2016 09:30:04.133</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.56</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.133</StartTime>
+<EndTime>11/11/2016 09:30:04.136</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.56</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.136</StartTime>
+<EndTime>11/11/2016 09:30:04.137</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.32</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.137</StartTime>
+<EndTime>11/11/2016 09:30:04.137</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>758.56</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.137</StartTime>
+<EndTime>11/11/2016 09:30:04.561</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.175</StartTime>
+<EndTime>11/11/2016 09:30:04.211</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.211</StartTime>
+<EndTime>11/11/2016 09:30:04.240</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.240</StartTime>
+<EndTime>11/11/2016 09:30:04.257</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.257</StartTime>
+<EndTime>11/11/2016 09:30:04.561</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>759.1</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.561</StartTime>
+<EndTime>11/11/2016 09:30:04.581</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.561</StartTime>
+<EndTime>11/11/2016 09:30:04.732</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>758.56</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.581</StartTime>
+<EndTime>11/11/2016 09:30:04.692</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.57</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.692</StartTime>
+<EndTime>11/11/2016 09:30:05.070</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:04.732</StartTime>
+<EndTime>11/11/2016 09:30:05.070</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>758.81</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.070</StartTime>
+<EndTime>11/11/2016 09:30:05.439</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.070</StartTime>
+<EndTime>11/11/2016 09:30:05.106</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.106</StartTime>
+<EndTime>11/11/2016 09:30:05.439</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.439</StartTime>
+<EndTime>11/11/2016 09:30:05.440</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.439</StartTime>
+<EndTime>11/11/2016 09:30:05.474</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.440</StartTime>
+<EndTime>11/11/2016 09:30:05.542</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.474</StartTime>
+<EndTime>11/11/2016 09:30:05.542</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.43</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.542</StartTime>
+<EndTime>11/11/2016 09:30:05.542</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.43</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.542</StartTime>
+<EndTime>11/11/2016 09:30:05.543</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.542</StartTime>
+<EndTime>11/11/2016 09:30:05.542</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.542</StartTime>
+<EndTime>11/11/2016 09:30:08.066</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.543</StartTime>
+<EndTime>11/11/2016 09:30:05.543</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.52</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.543</StartTime>
+<EndTime>11/11/2016 09:30:05.550</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.550</StartTime>
+<EndTime>11/11/2016 09:30:05.550</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.61</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.550</StartTime>
+<EndTime>11/11/2016 09:30:05.551</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.551</StartTime>
+<EndTime>11/11/2016 09:30:05.551</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.67</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.551</StartTime>
+<EndTime>11/11/2016 09:30:05.552</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.552</StartTime>
+<EndTime>11/11/2016 09:30:05.552</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.71</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:05.552</StartTime>
+<EndTime>11/11/2016 09:30:06.067</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>759.06</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.71</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:06.067</StartTime>
+<EndTime>11/11/2016 09:30:06.964</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>759.06</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.71</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:06.964</StartTime>
+<EndTime>11/11/2016 09:30:06.964</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.52</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.71</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:06.964</StartTime>
+<EndTime>11/11/2016 09:30:06.965</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.71</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:06.965</StartTime>
+<EndTime>11/11/2016 09:30:06.970</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:06.970</StartTime>
+<EndTime>11/11/2016 09:30:06.971</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.71</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:06.971</StartTime>
+<EndTime>11/11/2016 09:30:07.659</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.659</StartTime>
+<EndTime>11/11/2016 09:30:07.659</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.82</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.7</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.659</StartTime>
+<EndTime>11/11/2016 09:30:07.825</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.52</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.7</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.825</StartTime>
+<EndTime>11/11/2016 09:30:07.825</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.52</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>758.82</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.825</StartTime>
+<EndTime>11/11/2016 09:30:07.827</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>300</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>758.82</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.827</StartTime>
+<EndTime>11/11/2016 09:30:07.827</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>300</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>758.81</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.827</StartTime>
+<EndTime>11/11/2016 09:30:07.832</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>100</BidQuantity>
+<BidPrice>758.03</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>758.81</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.832</StartTime>
+<EndTime>11/11/2016 09:30:07.845</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>300</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>758.81</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.845</StartTime>
+<EndTime>11/11/2016 09:30:07.873</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>758.81</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.873</StartTime>
+<EndTime>11/11/2016 09:30:07.947</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>758.82</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:07.947</StartTime>
+<EndTime>11/11/2016 09:30:08.037</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:08.037</StartTime>
+<EndTime>11/11/2016 09:30:09.336</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:08.066</StartTime>
+<EndTime>11/11/2016 09:30:08.073</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:08.073</StartTime>
+<EndTime>11/11/2016 09:30:10.310</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>300</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:09.336</StartTime>
+<EndTime>11/11/2016 09:30:10.309</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>300</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.7</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:10.309</StartTime>
+<EndTime>11/11/2016 09:30:10.310</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:10.310</StartTime>
+<EndTime>11/11/2016 09:30:10.346</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>300</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>760</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:10.310</StartTime>
+<EndTime>11/11/2016 09:30:10.947</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:10.346</StartTime>
+<EndTime>11/11/2016 09:30:10.947</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>300</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.7</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:10.947</StartTime>
+<EndTime>11/11/2016 09:30:24.389</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:10.947</StartTime>
+<EndTime>11/11/2016 09:30:10.985</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>B</MarketCenter>
+<BidQuantity>200</BidQuantity>
+<BidPrice>755.75</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>762.01</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:10.985</StartTime>
+<EndTime>11/11/2016 09:30:27.088</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>500</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.7</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:24.389</StartTime>
+<EndTime>11/11/2016 09:30:24.860</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>500</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>300</AskQuantity>
+<AskPrice>759.7</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:24.860</StartTime>
+<EndTime>11/11/2016 09:30:24.998</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>500</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>200</AskQuantity>
+<AskPrice>759.7</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:24.998</StartTime>
+<EndTime>11/11/2016 09:30:24.998</EndTime>
+</Quote>
+<Quote>
+<MarketCenter>Q</MarketCenter>
+<BidQuantity>500</BidQuantity>
+<BidPrice>758</BidPrice>
+<AskQuantity>100</AskQuantity>
+<AskPrice>759.67</AskPrice>
+<QuoteCondition>R</QuoteCondition>
+<StartTime>11/11/2016 09:30:24.998</StartTime>
+<EndTime>11/11/2016 09:30:29.071</EndTime>
+</Quote>
+</Quotes>
+</QuoteResults>
+</ArrayOfQuoteResults>

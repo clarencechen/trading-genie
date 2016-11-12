@@ -57,7 +57,7 @@ function setUpSocket() {
 							info.eachChild(function (stock) {
 								if(stock.childNamed('Outcome').val == "RequestError")
 								{
-									console.log(childNamed('Message').val)
+									console.log(stock.childNamed('Message').val)
 									return;
 								}
 								var sym = stock.childNamed('Symbol').val
@@ -68,7 +68,7 @@ function setUpSocket() {
 								{
 									console.log(stock.childNamed('Quotes').childrenNamed('Quote').length)
 									for (var i = 0; i < Math.min(stock.childNamed('Quotes').childrenNamed('Quote').length, 100); i++) {
-										datum = stock.childNamed('Quotes').childrenNamed('Quote').length.splice(0, 1)
+										datum = stock.childNamed('Quotes').childrenNamed('Quote').splice(0, 1)
 										price[sym][i] = +(datum.childNamed('BidPrice').val)
 										time[sym][i] = datum.childNamed('EndTime').val
 									}
