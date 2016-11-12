@@ -3,7 +3,7 @@ console.log('app started')
 var querystring = require('querystring')
 var express = require('express')
 var http = require('http')
-var parseString = require('xml2js').parseString
+var xml2json = require("simple-xml2json")
 var app = express()
 
 app.use('/', express.static(__dirname+"/static"))
@@ -51,38 +51,31 @@ function setUpSocket() {
 							console.log("data received from api")
 					    	price = {}
 					    	time = {}
-					    	parseString(str, function (err, result) {
-								if(err)
-									console.log(JSON.stringify(err))
-								setInterval(function timeout() {
-									ws.send('ping')
-								}, 500)
-								string = result.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
-									if(stock.Outcome[0] == "RequestError")
-									{
-										console.log(stock.Message[0])
-										return;
+					    	var info = JSON.stringify(xml2json.parser(str))
+							string = result.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
+								if(stock.Outcome[0] == "RequestError")
+								{
+									console.log(stock.Message[0])
+									return;
+								}
+								var sym = stock.Symbol
+								price[sym] = []
+								time[sym] = []
+								ws.send('stock::' + sym)
+								while (stock.Quotes[0].Quote.length > 0)
+								{
+									console.log(stock.Quotes[0].Quote.length)
+									for (var i = 0; i < Math.min(stock.Quotes[0].Quote.length, 100); i++) {
+										datum = stock.Quotes[0].Quote.splice(0, 1)[0]
+										price[sym][i] = +(datum[0].BidPrice)
+										time[sym][i] = datum[0].EndTime[0]
 									}
-									var sym = stock.Symbol
-									price[sym] = []
-									time[sym] = []
-									ws.send('stock::' + sym)
-									while (stock.Quotes[0].Quote.length > 0)
-									{
-										console.log(stock.Quotes[0].Quote.length)
-										for (var i = 0; i < Math.min(stock.Quotes[0].Quote.length, 100); i++) {
-											datum = stock.Quotes[0].Quote.splice(0, 1)
-											console.log(JSON.stringify(datum))
-											price[sym][i] = +(datum.BidPrice)
-											time[sym][i] = datum.EndTime[0]
-										}
-										var analys = [price[sym], time[sym]]
-										console.log(JSON.stringify(analys))
-										ws.send(JSON.stringify([price, time]))
-									}
-								})
-								ws.send('end')
+									var analys = [price[sym], time[sym]]
+									console.log(JSON.stringify(analys))
+									ws.send(JSON.stringify([price, time]))
+								}
 							})
+							ws.send('end')
 						})
 					}
 					var req = http.request(options, callback)
