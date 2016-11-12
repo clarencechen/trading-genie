@@ -35,7 +35,6 @@ function setUpSocket() {
 									})
 					var options = {
 						host: 'http://ws.nasdaqdod.com',
-						port: 80,
 						path: '/v1/NASDAQQuotes.asmx/GetQuotes',
 						method: 'POST',
 						headers: {
