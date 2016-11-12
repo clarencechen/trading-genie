@@ -31,7 +31,7 @@ $(document).ready(function() {
 function submitQuery() {
 	if($("#comment").val() == "")
 		return "";
-	var query = {symbols: $('#symbols').val(), start: ($('#start').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), end: ($('#end').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), markets: $('#markets').val()}
+	var query = {symbols: $('#symbols').val(), start: ($('#start').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), end: ($('#end').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), markets: 'B, Q'}
 	//$("#comment").val();
 	$("#comment").val("");
 	ws.send("quote::" + JSON.stringify(query));
