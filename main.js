@@ -42,9 +42,6 @@ function setUpSocket() {
 						}
 					}
 					function callback(response) {
-						setInterval(function timeout() {
-							ws.send('ping')
-						}, 500)
 						var str = ""
 					    console.log("In callback")
 						response.on("data", function (chunk) {
@@ -58,6 +55,9 @@ function setUpSocket() {
 								if(err)
 									console.log(JSON.stringify(err))
 								string = result.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
+									setInterval(function timeout() {
+										ws.send('ping')
+									}, 500)
 									if(stock.Outcome[0] == "RequestError")
 									{
 										console.log(stock.Message[0])
@@ -65,16 +65,20 @@ function setUpSocket() {
 									}
 									price[stock.Symbol] = []
 									time[stock.Symbol] = []
-									stock.Quotes[0].Quote.forEach(function(e, i) {
-										price[stock.Symbol][i] = +(e.BidPrice)
-										time[stock.Symbol][i] = e.EndTime[0]
-									})
-									var analys = [price[stock.Symbol], time[stock.Symbol]]
-									console.log(JSON.stringify(analys))
-
+									ws.send('stock::' + stock.Symbol)
+									while (stock.Quotes[0].Quote.length > 0)
+									{
+										for (var i = 0; i < min(stock.Quotes[0].Quote.length, 100); i++) {
+											price[stock.Symbol][i] = +(stock.Quotes[0].Quote.splice(0).BidPrice)
+											time[stock.Symbol][i] = stock.Quotes[0].Quote.splice(0).EndTime[0]
+										}
+										var analys = [price[stock.Symbol], time[stock.Symbol]]
+										console.log(JSON.stringify(analys))
+										ws.send(JSON.stringify([price, time]))
+									}
 								})
+								ws.send('end')
 							})
-							ws.send(JSON.stringify([price, time]))
 						})
 					}
 					var req = http.request(options, callback)

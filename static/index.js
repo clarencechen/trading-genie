@@ -1,6 +1,7 @@
 var host = location.origin.replace(/^http/, 'ws')
 var ws = new WebSocket(host);
 $(document).ready(function() {
+	var arr = [{},{}]
 	$("button#submit").click(submitQuery);
 	$("#comment").keypress(function(e){
 		if(e.which == 13) {
@@ -17,16 +18,28 @@ $(document).ready(function() {
 		{
 			console.log('still staying alive')	
 		}
-		else
+		else if(event.data.split("::")[0] == 'stock')
 		{
-			console.log(event.data)
-			arr = JSON.parse(event.data)
+			arr.forEach(function(e) {e[stock] = []})	
+		}
+		else if(event.data == 'end')
+		{
 			arr.forEach(function(e, which) {
 				for(var stock in e)
 				{
 					e[stock].forEach(function(entry, i) {
 						$('#review').append('<p class="review">' + stock + ' Quote ' + i + (!which ? "'s price: " : "'s time: ") + entry + '</p>')
 					})
+				}
+			})
+			arr = [{},{}]
+		}
+		else
+		{
+			arr.forEach(function(e, which) {
+				for(var stock in e)
+				{
+					e[stock] += JSON.parse(event.data[which][stock])
 				}
 			})
 		}
