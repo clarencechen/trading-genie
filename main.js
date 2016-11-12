@@ -3,7 +3,7 @@ console.log('app started')
 var querystring = require('querystring')
 var express = require('express')
 var http = require('http')
-var $ = require('jQuery')
+var $ = require('jquery')
 var app = express()
 
 app.use('/', express.static(__dirname+"/static"))
