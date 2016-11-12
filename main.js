@@ -78,6 +78,8 @@ function setUpSocket() {
 									var analys = [price[sym], time[sym]]
 									console.log(JSON.stringify(analys))
 									ws.send(JSON.stringify([price, time]))
+									price[sym] = []
+									time[sym] = []
 								}
 							})
 							ws.send('end')
