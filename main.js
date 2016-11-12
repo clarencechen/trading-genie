@@ -3,7 +3,7 @@ console.log('app started')
 var querystring = require('querystring')
 var express = require('express')
 var http = require('http')
-var xml2json = require("simple-xml2json")
+var xmldoc = require("xmldoc")
 var app = express()
 
 app.use('/', express.static(__dirname+"/static"))
@@ -51,24 +51,25 @@ function setUpSocket() {
 							console.log("data received from api")
 					    	price = {}
 					    	time = {}
-					    	var info = JSON.parse(xml2json.parser(str))
-							info.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
-								if(stock.Outcome[0] == "RequestError")
+					    	var info = new xmldoc.XmlDocument(str)
+					    	console.log('parsed')
+							info.eachChild(function (stock) {
+								if(stock.childNamed('Outcome').val == "RequestError")
 								{
-									console.log(stock.Message[0])
+									console.log(childNamed('Message').val)
 									return;
 								}
-								var sym = stock.Symbol
+								var sym = stock.childNamed('Symbol').val
 								price[sym] = []
 								time[sym] = []
 								ws.send('stock::' + sym)
-								while (stock.Quotes[0].Quote.length > 0)
+								while (stock.childNamed('Quotes').childrenNamed('Quote').length > 0)
 								{
-									console.log(stock.Quotes[0].Quote.length)
-									for (var i = 0; i < Math.min(stock.Quotes[0].Quote.length, 100); i++) {
-										datum = stock.Quotes[0].Quote.splice(0, 1)[0]
-										price[sym][i] = +(datum[0].BidPrice)
-										time[sym][i] = datum[0].EndTime[0]
+									console.log(stock.childNamed('Quotes').childrenNamed('Quote').length)
+									for (var i = 0; i < Math.min(stock.childNamed('Quotes').childrenNamed('Quote').length, 100); i++) {
+										datum = stock.childNamed('Quotes').childrenNamed('Quote').length.splice(0, 1)
+										price[sym][i] = +(datum.childNamed('BidPrice').val)
+										time[sym][i] = datum.childNamed('EndTime').val
 									}
 									var analys = [price[sym], time[sym]]
 									console.log(JSON.stringify(analys))
