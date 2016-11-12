@@ -40,7 +40,7 @@ function setUpSocket() {
 						method: 'POST',
 						headers: {
 						    'Content-Type': 'application/x-www-form-urlencoded',
-						    'Content-Length': Buffer.byteLength(JSON.stringify(data), 'utf8')
+						    'Content-Length': Buffer.byteLength(data, 'utf8')
 						}
 					}
 					console.log('about to call nasdaq api')
