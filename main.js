@@ -54,10 +54,10 @@ function setUpSocket() {
 					    	parseString(str, function (err, result) {
 								if(err)
 									console.log(JSON.stringify(err))
+								setInterval(function timeout() {
+									ws.send('ping')
+								}, 500)
 								string = result.ArrayOfQuoteResults.QuoteResults.forEach(function (stock) {
-									setInterval(function timeout() {
-										ws.send('ping')
-									}, 500)
 									if(stock.Outcome[0] == "RequestError")
 									{
 										console.log(stock.Message[0])
@@ -69,7 +69,7 @@ function setUpSocket() {
 									while (stock.Quotes[0].Quote.length > 0)
 									{
 										console.log(stock.Quotes[0].Quote.length)
-										for (var i = 0; i < min(stock.Quotes[0].Quote.length, 100); i++) {
+										for (var i = 0; i < Math.min(stock.Quotes[0].Quote.length, 100); i++) {
 											datum = stock.Quotes[0].Quote.splice(0)
 											price[stock.Symbol][i] = +(datum.BidPrice)
 											time[stock.Symbol][i] = datum.EndTime[0]
