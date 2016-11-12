@@ -50,9 +50,7 @@ function setUpSocket() {
 							ws.send(res)
 					})
 					console.log('about to call nasdaq api')
-					req.write(data)
-					console.log('called api')
-					req.end()
+					req.end(data, 'utf8', function() {console.log('called api')})
 					break
 				}
 				default:
