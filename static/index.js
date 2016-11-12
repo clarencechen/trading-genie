@@ -22,7 +22,7 @@ $(document).ready(function() {
 function submitQuery() {
 	if($("#comment").val() == "")
 		return "";
-	var query = {symbols: 'AAPL', start: '2/1/2015 00:00:00.000', end: '2/5/2015 00:00:00.000'}
+	var query = {symbols: 'AAPL', start: '2/1/2015 00:00:00.000', end: '2/5/2015 00:00:00.000', markets: 'Q, B'}
 	//$("#comment").val();
 	$("#comment").val("");
 	ws.send("quote::" + JSON.stringify(query));

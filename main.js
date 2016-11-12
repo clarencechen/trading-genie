@@ -30,7 +30,7 @@ function setUpSocket() {
 										'Symbols' : stuff['symbols'],
 										'StartDateTime' : stuff['start'],
 										'EndDateTime' : stuff['end'],
-										'MarketCenters' : '' 
+										'MarketCenters' : stuff['markets']
 									})
 					var options = {
 						host: 'ws.nasdaqdod.com',
