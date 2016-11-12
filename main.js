@@ -43,11 +43,9 @@ function setUpSocket() {
 						}
 					}
 					var req = http.request(options, function(res) {
-					    
-
 					    	console.log("In callback")
-					        console.log("body: " + res)
-							ws.send(res)
+					        console.log("body: " + JSON.stringify(res))
+							ws.send(JSON.stringify(res))
 					})
 					console.log('about to call nasdaq api')
 					req.end(data, 'utf8', function() {console.log('called api')})
