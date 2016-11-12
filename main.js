@@ -45,7 +45,6 @@ function setUpSocket() {
 						var str = ""
 					    console.log("In callback")
 						response.on("data", function (chunk) {
-							console.log('data incoming')
 							str += chunk
 						})
 						response.on("end", function () {
@@ -54,10 +53,10 @@ function setUpSocket() {
 					    	parseString(str, function (err, result) {
 								if(err)
 									console.log(JSON.stringify(err))
-								string = result.ArrayOfQuoteResults.QuoteResults.Quotes.forEach(function(e, i) {
+								string = result.ArrayOfQuoteResults.QuoteResults.Quotes.Quote.forEach(function(e, i) {
 									console.log('working on quote ' + i)
-									price[i] = +(e.Quote.BidPrice)
-									time[i] = e.Quote.endTime
+									price[i] = +(e.BidPrice)
+									time[i] = e.endTime
 								})
 
 
