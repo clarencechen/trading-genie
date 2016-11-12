@@ -39,7 +39,8 @@ function setUpSocket() {
 						headers: {
 						    'Content-Type': 'application/x-www-form-urlencoded',
 						    'Content-Length': Buffer.byteLength(data, 'utf8')
-						}
+						},
+						agent: undefined
 					}
 					function callback(response) {
 						var str = ""
@@ -49,10 +50,10 @@ function setUpSocket() {
 						})
 						response.on("end", function () {
 							console.log("data received from api")
-					    	price = {}
-					    	time = {}
-					    	var info = new xmldoc.XmlDocument(str)
-					    	console.log('parsed')
+							var price = {}
+							var time = {}
+							var info = new xmldoc.XmlDocument(str)
+							console.log('parsed')
 							info.eachChild(function (stock) {
 								if(stock.childNamed('Outcome').val == "RequestError")
 								{
