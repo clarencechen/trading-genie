@@ -34,7 +34,7 @@ function setUpSocket() {
 										'MarketCenters' : '' 
 									})
 					var options = {
-						host: 'http://ws.nasdaqdod.com',
+						host: 'ws.nasdaqdod.com',
 						path: '/v1/NASDAQQuotes.asmx/GetQuotes',
 						method: 'POST',
 						headers: {
