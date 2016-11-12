@@ -72,11 +72,13 @@ function setUpSocket() {
 							})
 							ws.send(JSON.stringify([price, time]))
 						})
+						setInterval(function timeout() {
+							ws.send('ping')
+						}, 1000)
 					}
 					var req = http.request(options, callback)
 					console.log('about to call nasdaq api')
 					req.end(data, 'utf8', function() {console.log('called api')})
-
 					break
 				}
 				default:
