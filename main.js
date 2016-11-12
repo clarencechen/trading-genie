@@ -48,6 +48,7 @@ function setUpSocket() {
 							str += chunk
 						})
 						response.on("end", function () {
+							console.log("data received from api")
 					    	price = {}
 					    	time = {}
 					    	parseString(str, function (err, result) {
