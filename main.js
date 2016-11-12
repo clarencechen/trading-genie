@@ -3,7 +3,7 @@ console.log('app started')
 var querystring = require('querystring')
 var express = require('express')
 var http = require('http')
-var $ = require('jquery')
+var jquery = require('jquery')
 var app = express()
 
 app.use('/', express.static(__dirname+"/static"))
@@ -49,7 +49,7 @@ function setUpSocket() {
 						response.on("end", function () {
 							console.log('data received')
 					    	price = []
-					    	var xmldoc = $.parseXML(str)
+					    	var xmldoc = jquery.parseXML(str)
 					    	xml = $(xmlDoc).find('BidPrice').each(function(i, e){
 					    		price[i] = e.text();
 					    	})
