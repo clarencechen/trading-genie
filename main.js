@@ -44,11 +44,14 @@ function setUpSocket() {
 					}
 					var req = http.request(options, function(res) {
 					    	console.log("In callback")
-					    	var oSerializer = Components.classes["@mozilla.org/xmlextras/xmlserializer;1"].createInstance(Components.interfaces.nsIDOMSerializer);
-							var sXML = oSerializer.serializeToString(res);
-					    	sJSONstr = JSON.stringify(xmlToJson(sXML))
-					        console.log("body: " + sJSONstr)
-							ws.send(sJSONstr)
+					    	price = []
+					    	var xmldoc = $.parseXML(res)
+					    	xml = $(xmlDoc).find('BidPrice').each(function(i, e){
+					    		price[i] = e.text();
+					    	})
+					    	str = JSON.stringify(price)
+					        console.log("body: " + str)
+							ws.send(str)
 					})
 					console.log('about to call nasdaq api')
 					req.end(data, 'utf8', function() {console.log('called api')})
