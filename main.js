@@ -49,9 +49,11 @@ function setUpSocket() {
 							console.log('data received')
 					    	//price = []
 					    	parseString(str, function (err, result) {
-								str = JSON.stringify(result)
-								console.log("body: " + str)
-								ws.send(str)	 
+								if(err)
+									console.log(JSON.stringify(err))
+								string = JSON.stringify(result)
+								console.log("body: " + string)
+								ws.send(string)	 
 							})
 						})
 					}
