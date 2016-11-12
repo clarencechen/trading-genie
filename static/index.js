@@ -50,7 +50,9 @@ function submitQuery() {
 		return "";
 	var query = {symbols: $('#symbols').val(), start: ($('#start').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), end: ($('#end').val() +':00').replace(/T/g, ' ').replace(/-/g, '/'), markets: 'B, Q'}
 	//$("#comment").val();
-	$("#comment").val("");
+	$('#symbols').val("");
+	$('#start').val("");
+	$('#end').val("");
 	ws.send("quote::" + JSON.stringify(query));
 	console.log("emitted " + JSON.stringify(query));
 }
