@@ -56,7 +56,7 @@ function setUpSocket() {
 					console.log('crap')
 				}
 			}
-				setTimeout(function timeout() {
+				setInterval(function timeout() {
     				ws.send('ping')
     				console.log('staying alive')
     			}, 50)
