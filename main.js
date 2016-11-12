@@ -44,7 +44,10 @@ function setUpSocket() {
 					function callback(response) {
 						var str = ""
 					    console.log("In callback")
-						response.on("data", function (chunk) {str += chunk})
+						response.on("data", function (chunk) {
+							console.log('data incoming')
+							str += chunk
+						})
 						response.on("end", function () {
 							console.log('data received ' + str)
 					    	//price = []
