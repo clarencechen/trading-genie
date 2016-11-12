@@ -15,8 +15,7 @@ $(document).ready(function() {
 		}
 		else
 		{
-		var obj = JSON.parse(event.data)
-		$('#review').append('<p class="review">' + obj + '</p>')
+		$('#review').append('<p class="review">' + event.data + '</p>')
 		}
 	}
 })
