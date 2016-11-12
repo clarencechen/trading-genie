@@ -64,11 +64,12 @@ function setUpSocket() {
 								price[sym] = []
 								time[sym] = []
 								ws.send('stock::' + sym)
-								while (stock.childNamed('Quotes').childrenNamed('Quote').length > 0)
+								arr = stock.childNamed('Quotes').childrenNamed('Quote')
+								while (arr.length > 0)
 								{
-									console.log(stock.childNamed('Quotes').childrenNamed('Quote').length)
-									for (var i = 0; i < Math.min(stock.childNamed('Quotes').childrenNamed('Quote').length, 100); i++) {
-										datum = stock.childNamed('Quotes').childrenNamed('Quote').splice(0, 1)[0]
+									console.log(arr.length)
+									for (var i = 0; i < Math.min(arr.length, 100); i++) {
+										datum = arr.splice(0, 1)[0]
 										price[sym][i] = +(datum.childNamed('BidPrice').val)
 										time[sym][i] = datum.childNamed('EndTime').val
 									}
