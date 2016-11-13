@@ -94,14 +94,12 @@ function setUpSocket() {
 										Module.getInputArr(pricepos, j)
 										Module._free(pricepos)
 									}
-									ws.send(JSON.stringify([price, time]))
+									ws.send("price::" +JSON.stringify(price[sym]))
 									price[sym] = []
 									time[sym] = []
 									j++;
 								}
 							})
-							ws.send('end')
-
 							var LMApointer = Module.SMAlow(low)
 							var HMApointer = Module.SMAhigh(high)
 							var lavg = []
@@ -116,6 +114,7 @@ function setUpSocket() {
 							ws.send("profit::" +profit.toString())
 							Module.delArr()
 
+							ws.send('end')
 						})
 					}
 					var req = http.request(options, callback)

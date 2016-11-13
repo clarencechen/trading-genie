@@ -1,9 +1,9 @@
 var host = location.origin.replace(/^http/, 'ws')
 var ws = new WebSocket(host);
 $(document).ready(function() {
-	var arr = [{},{}]
-	var lavg, havg = []
+	var lavg, havg, price = []
 	var profit
+	var stock = ''
 	$("button#submit").click(submitQuery);
 	$("#comment").keypress(function(e){
 		if(e.which == 13) {
@@ -22,12 +22,12 @@ $(document).ready(function() {
 		}
 		else if(event.data.split("::")[0] == 'stock')
 		{
-			arr.forEach(function(e) {e[event.data.split("::")[1]] = []})	
+			stock = event.data.split("::")[1]	
 		}
 		else if(event.data.split("::")[0] == 'lavg')
 		{
 			lavg = JSON.parse(event.data.split("::")[1])
-			$('#lavg').text(JSON.stringify(lavg))	
+			$('#lavg').text(JSON.stringify(lavg))
 		}
 		else if(event.data.split("::")[0] == 'havg')
 		{
@@ -39,26 +39,16 @@ $(document).ready(function() {
 			profit = +(event.data.split("::")[1])
 			console.log('profit: ' + profit)
 		}
-		else if(event.data.split("::")[0] == 'end')
+		else if(event.data.split("::")[0] == 'price')
 		{
-			arr.forEach(function(e, which) {
-				for(var stock in e)
-				{
-					e[stock].forEach(function(entry, i) {
-						$('#review').append('<p class="review">' + stock + ' Quote ' + i + (!which ? "'s price: " : "'s time: ") + entry + '</p>')
-					})
-				}
-			})
-			arr = [{},{}]
+			$.extend(price, JSON.parse(event.data.split("::")[1]))
 		}
-		else
+		else if(event.data = 'end')
 		{
-			arr.forEach(function(e, which) {
-				for(var stock in e)
-				{
-					e[stock].push($.parseJSON(event.data)[which][stock])
-				}
-			})
+			$('#charttitle').text('<h2>Strategy results for ' + stock + '</h2>')
+			plot(lavg, "blue", "Low Moving Average");
+			plot(havg, "red", "High Moving Average");
+			plot(price, "green", "Instantaneos Price");
 		}
 	}
 })
@@ -70,6 +60,7 @@ function submitQuery() {
 	$('#symbols').val("");
 	$('#start').val("");
 	$('#end').val("");
+	$('#strategy').val("");
 	$('#low').val("");
 	$('#high').val("");
 	ws.send("quote::" + JSON.stringify(query));

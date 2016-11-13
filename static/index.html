@@ -7,14 +7,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="index.js"></script>
+	<script src="linechart.js"></script>
 	<style>
 	/* Remove the navbar's default margin-bottom and rounded borders */
-	.navbar {
-	  margin-bottom: 0;
-	  border-radius: 0;
-	  font-family: 'Raleway', sans-serif;
-	}
 	.jumbotron{
 	  background-color: #ffffcc;
 	  font-family: 'Raleway', sans-serif;
@@ -35,77 +32,16 @@
 		background-color: #ffffcc;
 		font-family: 'Raleway', sans-serif;
 	}
-	.Introduction img {
-		max-width:100%;
-		max-height:100%;
-		margin:auto;
-		display:block;
-	}
-	.popup-box
-	{
-	    display: block;
-	    background-color: rgb(237, 239, 244);
-	    width: 300px;
-	    border: 1px solid rgba(29, 49, 91, .3);
+
+	.axis--x path {
+	  display: none;
 	}
 	
-	.popup-box .popup-head
-	{
-	    background-color: #6d84b4;
-	    padding: 5px;
-	    color: white;
-	    font-weight: bold;
-	    font-size: 14px;
-	    clear: both;
+	.line {
+	  fill: none;
+	  stroke-width: 1.5px;
 	}
-	
-	.popup-box .popup-head .popup-head-left
-	{
-	    float: left;
-	}
-	
-	.popup-box .popup-head .popup-head-right
-	{
-	    float: right;
-	    opacity: 0.5;
-	}
-	
-	.popup-box .popup-head .popup-head-right a
-	{
-	    text-decoration: none;
-	    color: inherit;
-	}
-	
-	.popup-box .popup-messages
-	{
-	    height: 400px;
-	    overflow-y: scroll;
-	}
-	.popup-box .popup-messages .user-messages
-	{
-	    text-align: right;
-	}
-	.popup-box .popup-messages .bot-messages
-	{
-	    text-align: left;
-	}
-	.popup-box .popup-foot
-	{
-		margin: 1px;
-		height: 100%;
-	}
-	.popup-box .popup-reply
-	{
-		float: left;
-		width: 80%;
-		overflow-y: scroll;
-		resize: vertical;
-	}
-	.popup-box .popup-send
-	{
-		width: 20%;
-		float: right;
-	}
+
   </style>
 </head>
 <body>
@@ -114,7 +50,6 @@
   <div class="container text-center">
     <h1>A</h1>
     <p>F</p>
-    <img src="Reviews.png">
   </div>
 </div>
 
@@ -138,9 +73,8 @@
       <button id="submit">Submit</button>
   </div>
   <footer class="container-fluid text-center">
-    <div id="review"></div>
-    <div id="lavg"></div>
-    <div id="havg"></div>
+    <div id= "charttitle"></div>
+    <svg width="1000" height="500"></svg>
   </footer>
 
 </body>
