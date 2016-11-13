@@ -51,16 +51,16 @@ uintptr_t SMAlow(int size1)
 	int length = data[0];
 	Low = new double[length + 1];
 	double sum;
-
-	for (int i = 0; i < length; i ++)
+    Low[0] = length;
+	for (int i = 1; i <= length; i ++)
 	{
-		if (i < size1)
+		if (i <= size1)
 		{
 			Low[i] = 0.0;
 			continue;
 		}
 		sum = 0;
-		for(int j = i - size1; j < i; j ++)
+		for(int j = i - size1 +1; j <= i; j ++)
 		{
 			sum += data[j];
 		}
@@ -73,16 +73,16 @@ uintptr_t SMAhigh(int size2)
 	int length = data[0];
 	High = new double[length + 1];
 	double sum;
-
-	for (int i = 0; i < length; i ++)
+    High[0] = length;
+	for (int i = 1; i <= length; i ++)
 	{
-		if (i < size2)
+		if (i <= size2)
 		{
 			High[i] = 0.0;
 			continue;
 		}
 		sum = 0;
-		for(int j = i - size2; j < i; j ++)
+		for(int j = i - size2 +1; j <= i; j ++)
 		{
 			sum += data[j];
 		}
@@ -97,7 +97,7 @@ int Net(int size1)
 	double boughtAt;
 	double soldAt;
 	double totalProfit = 0;
-	for (int i = size1 + 1; i < dataPoints; i++)
+	for (int i = size1 + 2; i <= dataPoints; i++)
 	{
 		//if slow moving average crosses over fastmovingaverage
 		if (Low[i] > High[i])

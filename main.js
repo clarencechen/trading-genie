@@ -68,6 +68,7 @@ function setUpSocket() {
 								time[sym] = []
 								ws.send('stock::' + sym)
 								arr = stock.childNamed('Quotes').childrenNamed('Quote')
+								totallength = arr.length
 								Module.setLen(arr.length)
 								var j = 0
 								while (arr.length > 0)
@@ -103,7 +104,7 @@ function setUpSocket() {
 							var LMApointer = Module.SMAlow(low)
 							var HMApointer = Module.SMAhigh(high)
 							var profit = Module.Net(low)
-							console.log(LMApointer + " " + HMApointer + " " +profit)
+							console.log(LMApointer + " " + HMApointer + " " + profit)
 							var lavg = []
 							var havg = []
 							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
