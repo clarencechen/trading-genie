@@ -39,7 +39,8 @@ $(document).ready(function() {
 			$('#profit').append('<h2>Current Total Profit: $' + profit + '</h2>')
 //			$('#profit').append('<h2>But you can make $' + optimals[0] + ' using ' + optimals[1] + ' as your parameter.</h2>')
 			var arrs = [lavg, price, havg]
-			var custommin = function(x){return d3.min(x)}
+			
+			var custommin = function(x){return d3.min(x.filter(function(e) {return x > 0;}))};
 			var custommax = function(x){return d3.max(x)}
 			var bottom = d3.min(arrs.map(custommin))
 			var top = d3.max(arrs.map(custommax))
