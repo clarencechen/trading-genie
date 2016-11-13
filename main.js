@@ -46,12 +46,16 @@ function setUpSocket() {
 						agent: undefined
 					}
 					function callback(response) {
+						
 						var str = ""
 					    ws.send("loading::Receiving data from API in chunks, please wait.")
 						response.on("data", function (chunk) {
 							str += chunk
 						})
 						response.on("end", function () {
+							setInterval(function timeout() {
+								ws.send('ping')
+							}, 50)
 							ws.send("loading::Need to parse data received from api")
 							var price = {}
 							var time = {}
@@ -129,11 +133,6 @@ function setUpSocket() {
 					console.log('crap')
 				}
 			}
-			setInterval(function timeout() {
-				ws.send('ping')
-			}, 50)
-		})
-		ws.on("open", function() {
 			setInterval(function timeout() {
 				ws.send('pong')
 			}, 50)
