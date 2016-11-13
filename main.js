@@ -101,20 +101,24 @@ function setUpSocket() {
 							})
 							var LMApointer = Module.SMAlow(low)
 							var HMApointer = Module.SMAhigh(high)
+							var optimalpointer = Module.Optimal(high, low)
 							var lavg = []
 							var havg = []
 							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
 								lavg[i -1] = Module.getValue(LMApointer +8*i, 'double')
 							for(i = 1; i <= Module.getValue(HMApointer, 'double'); i++)
 								havg[i -1] = Module.getValue(HMApointer +8*i, 'double')
-							var optimals = [Module.getValue(Module.Optimal(high, low), 'double'), Module.getValue(Module.Optimal(high, low) +8, 'double')]
+							var optimals = [Module.getValue(optimalpointer, 'double'), Module.getValue(optimalpointer +8, 'double')]
+
 							var profit = Module.Net(low)
 							ws.send("lavg::" +JSON.stringify(lavg))
 							ws.send("havg::" +JSON.stringify(havg))
 							ws.send("profit::" +profit.toString())
 							ws.send("optimals::" +JSON.stringify(optimals))
 							Module.delArr()
-
+							Module._free(LMApointer)
+							Module._free(HMApointer)
+							Module._free(optimalpointer)
 							ws.send('end')
 						})
 					}
