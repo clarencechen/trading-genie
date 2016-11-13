@@ -64,7 +64,7 @@ function submitQuery() {
 }
 
 function plot(data, colors, names, top, bottom) {
-	d3.select("svg").remove();
+	d3.select("svg").selectAll("*").remove();
 	var svg = d3.select("svg"),
 		margin = {top: 20, right: 20, bottom: 30, left: 50},
 		width = +svg.attr("width") - margin.left - margin.right,
