@@ -36,9 +36,7 @@ $(document).ready(function() {
 			var top = d3.max([d3.max(lavg), d3.max(price), d3.max(havg)])
 			console.log(top + ' ' +bottom);
 			$('#charttitle').append('<h2>Strategy results for ' + stock + '</h2>')
-			plot(lavg, "blue", "Low Moving Average", top, bottom);
-			plot(havg, "red", "High Moving Average", top, bottom);
-			plot(price, "green", "Instantaneos Price", top, bottom);
+			plot([lavg, price, havg], ["blue", "green", "red"], ["Low Moving Average", "Instantaneous Price", "High Moving Average"], top, bottom);
 		}
 	}
 })
@@ -57,7 +55,7 @@ function submitQuery() {
 	console.log("emitted " + JSON.stringify(query));
 }
 
-function setupSVG() {
+function plot(data, colors, names, top, bottom) {
 	var svg = d3.select("svg"),
 		margin = {top: 20, right: 20, bottom: 30, left: 50},
 		width = +svg.attr("width") - margin.left - margin.right,
@@ -65,9 +63,6 @@ function setupSVG() {
 		g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	
 	svg.style("border","1px solid black");
-	
-	var parseTime = d3.timeParse("%b %Y");
-	
 	
 	var x = d3.scaleTime()
 			.rangeRound([0, width]);
@@ -85,36 +80,36 @@ function setupSVG() {
 	var xAxis = d3.axisBottom()
 			.scale(x).ticks(0);
 
-	function plot(data, color, name, top, bottom) {
-		x.domain([0, data.length]);
-		y.domain([bottom,top]);
+	x.domain([0, data[1].length]);
+	y.domain([bottom,top]);
 	
-		g.append("g")
-				.attr("class", "xaxis")
-				.attr("transform", "translate(0," + height + ")")
-				.call(xAxis);
+	g.append("g")
+			.attr("class", "xaxis")
+			.attr("transform", "translate(0," + height + ")")
+			.call(xAxis);
 	
-		g.append("g")
-				.attr("class", "yaxis")
-				.call(d3.axisLeft(y))
-				.append("text")
-				.attr("fill", "#333")
-				.attr("transform", "rotate(-90)")
-				.attr("y", 6)
-				.attr("dy", "0.71em")
-				.style("text-anchor", "end")
-				.text("Price ($)");
-	
+	g.append("g")
+			.attr("class", "yaxis")
+			.call(d3.axisLeft(y))
+			.append("text")
+			.attr("fill", "#333")
+			.attr("transform", "rotate(-90)")
+			.attr("y", 6)
+			.attr("dy", "0.71em")
+			.style("text-anchor", "end")
+			.text("Price ($)");
+
+	for(i = 0; i < 3; i++)
+	{
 		g.append("path")
-				.attr("class", "line")
-				.attr("stroke",color)
-				.attr("d", line(data));
-	
+			.attr("class", "line")
+			.attr("stroke",colors[i])
+			.attr("d", line(data[i]));
 		svg.append("text")
-				.attr("transform", "translate(" + (width+10) + "," + y(data[data.length-1].value-20) + ")")
-				.attr("dy", ".35em")
-				.attr("text-anchor", "start")
-				.style("fill", color)
-				.text(name);
+			.attr("transform", "translate(" + (width+10) + "," + y(data[i][data[i].length-1]-20) + ")")
+			.attr("dy", ".35em")
+			.attr("text-anchor", "start")
+			.style("fill", colors[i])
+			.text(names[i]);
 	}
 }
