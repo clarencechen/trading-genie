@@ -108,8 +108,10 @@ function setUpSocket() {
 							var lavg = []
 							var havg = []
 							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
+							{
 								lavg[i -1] = Module.getValue(LMApointer +8*i, 'double')
 								console.log(lavg[i -1])
+							}
 							for(i = 1; i <= Module.getValue(HMApointer, 'double'); i++)
 								havg[i -1] = Module.getValue(HMApointer +8*i, 'double')
 							ws.send("lavg::" +JSON.stringify(lavg))
@@ -145,24 +147,3 @@ function setUpSocket() {
 }
 
 setUpSocket()
-
-
-function callQuery(data, callback) {
-	client.post('analyzesentiment', data, function(err, resp) {
-		if(err)
-		{
-			console.log('An error occured! ' + err)
-			bail(err, callback)
-		}
-		else
-		{
-			console.log('We got ' + JSON.stringify(resp.body))
-			callback(resp.body);
-		}
-	})
-}
-
-function bail(err, callback) {
-	var error = {isError: true, error: err}
-	callback(error)
-}
