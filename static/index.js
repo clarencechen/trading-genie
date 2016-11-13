@@ -27,17 +27,17 @@ $(document).ready(function() {
 		else if(event.data.split("::")[0] == 'lavg')
 		{
 			lavg = JSON.parse(event.data.split("::")[1])
-			console.log('lavg: ' + JSON.stringify(lavg))	
+			$('#lavg').text(JSON.stringify(lavg))	
 		}
 		else if(event.data.split("::")[0] == 'havg')
 		{
 			havg = JSON.parse(event.data.split("::")[1])
-			console.log('havg: ' + JSON.stringify(havg))
+			$('#havg').text(JSON.stringify(havg))
 		}
 		else if(event.data.split("::")[0] == 'profit')
 		{
 			profit = +(event.data.split("::")[1])
-			console.log('profit: ' + JSON.stringify(profit))
+			console.log('profit: ' + profit)
 		}
 		else if(event.data.split("::")[0] == 'end')
 		{
