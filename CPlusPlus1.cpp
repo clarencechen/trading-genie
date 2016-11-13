@@ -5,10 +5,10 @@ using namespace emscripten;
 void getInputArr(double* Price, int index);
 void combine(double* Price, int index);
 void setLen(const int ArrLen);
-double* SMAlow(int size1);
-double* SMAhigh(int size2);
+uintptr_t SMAlow(int size1);
+uintptr_t SMAhigh(int size2);
 int Net(int size1);
-int* Optimal(int size2, int size1);
+uintptr_t Optimal(int size2, int size1);
 void delArr();
 
 double* High;
@@ -46,7 +46,7 @@ void setLen(const int ArrLen)
 	double* data = new double[ArrLen + 1];
 	data[0] = ArrLen;
 }
-double* SMAlow(int size1)
+uintptr_t SMAlow(int size1)
 {
 	int length = data[0];
 	double* Low = new double[length + 1];
@@ -66,9 +66,9 @@ double* SMAlow(int size1)
 		}
 		Low[i] = sum/(double)(size1);
 	}
-	return Low;
+	return reinterpret_cast<uintptr_t>(Low);//emscripten does not support returning pointers
 }
-double* SMAhigh(int size2)
+uintptr_t SMAhigh(int size2)
 {
 	int length = data[0];
 	double* High = new double[length + 1];
@@ -88,7 +88,7 @@ double* SMAhigh(int size2)
 		}
 		High[i] = sum/(double)(size2);
 	}
-	return High;
+	return reinterpret_cast<uintptr_t>(High);//emscripten does not support returning pointers
 }
 int Net(int size1)
 {
@@ -131,7 +131,7 @@ int Net(int size1)
 	}
 	return (int)(totalProfit);
 }
-int* Optimal(int size2,int size1)
+uintptr_t Optimal(int size2,int size1)
 {
 	int maximum = 0;
 	int dataPoints = data[0];
@@ -143,7 +143,7 @@ int* Optimal(int size2,int size1)
 
 	for (int i = 2; i < size1; i ++)
 	{
-		FMA = SMAhigh(i);
+		FMA = (double*)(SMAhigh(i));
 		High = FMA;
 		int temp = Net(size1);
 
@@ -159,7 +159,7 @@ int* Optimal(int size2,int size1)
 	optimal[1] = optimalBar;
 	delete[] FMA;
 	//delete[] SMA;
-	return optimal;
+	return reinterpret_cast<uintptr_t>(optimal);//emscripten does not support returning pointers
 }
 void delArr()
 {
