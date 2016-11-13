@@ -103,6 +103,7 @@ function setUpSocket() {
 							var LMApointer = Module.SMAlow(low)
 							var HMApointer = Module.SMAhigh(high)
 							var profit = Module.Net(low)
+							console.log(LMApointer + " " + HMApointer + " " +profit)
 							var lavg = []
 							var havg = []
 							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
