@@ -103,7 +103,7 @@ function setUpSocket() {
 							ws.send('end')
 							var LMApointer = Module.SMAlow(low)
 							console.log('len' +Module.getValue(LMApointer, 'double'))
-							console.log('first' +Module.getValue(LMApointer +8*(size1 +5), 'double'))
+							console.log('first' +Module.getValue(LMApointer +8*(low +5), 'double'))
 							var HMApointer = Module.SMAhigh(high)
 							var lavg = []
 							var havg = []
