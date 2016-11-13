@@ -44,15 +44,16 @@ void combine(double* Price, int index)
 void setLen(const int ArrLen)
 {
 	data = new double[ArrLen + 1];
+	High = new double[ArrLen+ 1];
+    Low = new double[ArrLen + 1];
 	data[0] = (double)ArrLen;
+	High[0] = (double)ArrLen;
+	Low[0] = (double)ArrLen;
 }
 uintptr_t SMAlow(int size1)
 {
-	int length = data[0];
-	Low = new double[length + 1];
 	double sum;
-    Low[0] = length;
-	for (int i = 1; i <= length; i ++)
+	for (int i = 1; i <= Low[0]; i ++)
 	{
 		if (i <= size1)
 		{
@@ -70,11 +71,8 @@ uintptr_t SMAlow(int size1)
 }
 uintptr_t SMAhigh(int size2)
 {
-	int length = data[0];
-	High = new double[length + 1];
 	double sum;
-    High[0] = length;
-	for (int i = 1; i <= length; i ++)
+	for (int i = 1; i <= High[0]; i ++)
 	{
 		if (i <= size2)
 		{
@@ -136,7 +134,6 @@ uintptr_t Optimal(int size2, int size1)
 	int maximum = 0;
 	const int dataPoints = data[0];
 	int optimalBar;
-	//double* FMA = new double[dataPoints];
 	double* FMA = new double[dataPoints];
 
 	//FMA = Plot(data, fastBar,dataPoints);
