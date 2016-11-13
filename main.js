@@ -93,7 +93,6 @@ function setUpSocket() {
 										}
 										Module.getInputArr(pricepos, j)
 										Module._free(pricepos)
-										console.log(JSON.stringify(analys))
 									}
 									ws.send(JSON.stringify([price, time]))
 									price[sym] = []

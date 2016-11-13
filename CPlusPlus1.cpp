@@ -2,7 +2,7 @@
 
 using namespace emscripten;
 
-void getInputArr(double* Price, int index);
+void getInputArr(uintptr_t Price, int index);
 void combine(double* Price, int index);
 void setLen(const int ArrLen);
 uintptr_t SMAlow(int size1);
@@ -30,9 +30,9 @@ EMSCRIPTEN_BINDINGS(raw_pointers)
 }
 
 
-void getInputArr(double* Price, int index)
+void getInputArr(uintptr_t Price, int index)
 {
-	combine(Price,index);
+	combine(reinterpret_cast<double*>(Price),index);
 }
 
 void combine(double* Price, int index)
