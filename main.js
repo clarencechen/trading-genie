@@ -70,7 +70,6 @@ function setUpSocket() {
 								totallength = arr.length
 								Module.setLen(arr.length)
 								var j = 0
-								ws.send('loading::Currently analyzing parsed data, please wait.')
 								while (arr.length > 0)
 								{
 									for (var i = 0; i <  100; i++) {
@@ -99,6 +98,7 @@ function setUpSocket() {
 									j++;
 								}
 							})
+							ws.send('loading::Currently analyzing parsed data, please wait.')
 							var LMApointer = Module.SMAlow(low)
 							var HMApointer = Module.SMAhigh(high)
 							var optimalpointer = Module.Optimal(high, low)
