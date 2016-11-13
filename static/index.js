@@ -24,7 +24,7 @@ $(document).ready(function() {
 			havg = JSON.parse(event.data.split("::")[1])
 		else if(event.data.split("::")[0] == 'profit')
 		{
-			profit = +(event.data.split("::")[1])
+			profit = +(event.data.split("::")[1]);
 			('#profit').append('<h2>Total Profit: ' + profit + '</h2>')
 		}
 		else if(event.data.split("::")[0] == 'price')
