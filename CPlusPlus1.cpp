@@ -143,7 +143,7 @@ uintptr_t Optimal(int size2, int size1)
 
 	for (int i = 2; i < size1; i ++)
 	{
-		FMA = (double*)(SMAhigh(i));
+		FMA = reinterpret_cast<double*>(SMAhigh(i));
 		High = FMA;
 		int temp = Net(size1);
 
@@ -154,7 +154,7 @@ uintptr_t Optimal(int size2, int size1)
 		}
 	}
 
-	optimal = new int[2];
+	int* optimal = new int[2];
 	optimal[0] = maximum;
 	optimal[1] = optimalBar;
 	delete[] FMA;

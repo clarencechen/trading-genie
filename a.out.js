@@ -7283,9 +7283,9 @@ function __Z7Optimalii($size2,$size1) {
  $size1 = $size1|0;
  var $$arith = 0, $$overflow = 0, $0 = 0, $1 = 0, $10 = 0, $11 = 0, $12 = 0, $13 = 0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $18 = 0, $19 = 0, $2 = 0, $20 = 0, $21 = 0, $22 = 0, $23 = 0, $24 = 0;
  var $25 = 0, $26 = 0, $27 = 0, $28 = 0, $29 = 0, $3 = 0.0, $30 = 0, $31 = 0, $32 = 0, $33 = 0, $4 = 0, $5 = 0, $6 = 0, $7 = 0, $8 = 0, $9 = 0, $FMA = 0, $dataPoints = 0, $i = 0, $maximum = 0;
- var $optimalBar = 0, $temp = 0, label = 0, sp = 0;
+ var $optimal = 0, $optimalBar = 0, $temp = 0, label = 0, sp = 0;
  sp = STACKTOP;
- STACKTOP = STACKTOP + 32|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abort();
+ STACKTOP = STACKTOP + 48|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abort();
  $0 = $size2;
  $1 = $size1;
  $maximum = 0;
@@ -7330,23 +7330,23 @@ function __Z7Optimalii($size2,$size1) {
   $i = $23;
  }
  $24 = (__Znaj(8)|0);
- HEAP32[420>>2] = $24;
+ $optimal = $24;
  $25 = $maximum;
- $26 = HEAP32[420>>2]|0;
+ $26 = $optimal;
  HEAP32[$26>>2] = $25;
  $27 = $optimalBar;
- $28 = HEAP32[420>>2]|0;
+ $28 = $optimal;
  $29 = ((($28)) + 4|0);
  HEAP32[$29>>2] = $27;
  $30 = $FMA;
  $31 = ($30|0)==(0|0);
  if ($31) {
-  $32 = HEAP32[420>>2]|0;
+  $32 = $optimal;
   $33 = $32;
   STACKTOP = sp;return ($33|0);
  }
  __ZdaPv($30);
- $32 = HEAP32[420>>2]|0;
+ $32 = $optimal;
  $33 = $32;
  STACKTOP = sp;return ($33|0);
 }
