@@ -44,7 +44,7 @@ void combine(double* Price, int index)
 void setLen(const int ArrLen)
 {
 	data = new double[ArrLen + 1];
-	data[0] = ArrLen;
+	data[0] = (double)ArrLen;
 }
 uintptr_t SMAlow(int size1)
 {
