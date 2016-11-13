@@ -84,8 +84,8 @@ function setUpSocket() {
 									var analys = [price[sym], time[sym]]
 									if(analys.length === 100)
 									{
-										var pricepos = Module._malloc(8*analys.length)
-										//var timepos = Module._malloc(8*analys.length)
+										var pricepos = Module._malloc(8*analys[0].length)
+										//var timepos = Module._malloc(8*analys[1].length)
 										for(var i = 0; i < analys[0].length; i++)
 										{
 											Module.setValue(pricepos +8*i, analys[0][i], 'double')
@@ -114,7 +114,6 @@ function setUpSocket() {
 							}
 							for(i = 1; i <= Module.getValue(HMApointer, 'double'); i++)
 								havg[i -1] = Module.getValue(HMApointer +8*i, 'double')
-
 							var profit = Module.Net(low)
 							ws.send("lavg::" +JSON.stringify(lavg))
 							ws.send("havg::" +JSON.stringify(havg))
