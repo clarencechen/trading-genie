@@ -36,7 +36,7 @@ $(document).ready(function() {
 		{
 			profit = +(event.data.split("::")[1])
 		}
-		else
+		else if(event.data.split("::")[0] == 'end')
 		{
 			arr.forEach(function(e, which) {
 				for(var stock in e)
@@ -48,7 +48,6 @@ $(document).ready(function() {
 			})
 			arr = [{},{}]
 		}
-
 		else
 		{
 			arr.forEach(function(e, which) {
