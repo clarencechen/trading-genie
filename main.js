@@ -27,8 +27,8 @@ function setUpSocket() {
 			switch (data.split("::")[0]) {
 				case "quote":
 				{
-					var low = stuff['low']
-					var high = stuff['high']
+					var low = +(stuff['low'])
+					var high = +(stuff['high'])
 					var data = querystring.stringify({	'_Token' : 'BC2B181CF93B441D8C6342120EB0C971',
 										'Symbols' : stuff['symbols'],
 										'StartDateTime' : stuff['start'],
