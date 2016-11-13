@@ -59,7 +59,7 @@ function setUpSocket() {
 							info.eachChild(function (stock) {
 								if(stock.childNamed('Outcome').val == "RequestError")
 								{
-									ws.send(sloading::tock.childNamed('Message').val)
+									ws.send('loading::' + stock.childNamed('Message').val)
 									return;
 								}
 								var sym = stock.childNamed('Symbol').val
