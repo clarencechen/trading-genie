@@ -116,8 +116,8 @@ function setUpSocket() {
 							ws.send("profit::" +profit.toString())
 							ws.send("optimals::" +JSON.stringify(optimals))
 							ws.send("loading::Hang on tight, we are almost ready...")
-							Module.delArr()
 							ws.send('end')
+							Module.delArr()
 						})
 					}
 					var req = http.request(options, callback)

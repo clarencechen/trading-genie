@@ -160,10 +160,10 @@ uintptr_t Optimal(int size2, int size1)
 }
 void delArr()
 {
+	delete[] optimal;
 	delete[] High;
 	delete[] Low;
 	delete[] data;
-	delete[] optimal;
 }
 //void myFunc(uintptr_t bufAddr, unsigned int size)
 //{
