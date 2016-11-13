@@ -37,7 +37,7 @@ $(document).ready(function() {
 		{
 			$('#charttitle').html('<h2>Strategy results for ' + stock + '</h2>')
 			$('#profit').append('<h2>Current Total Profit: $' + profit + '</h2>')
-			$('#profit').append('<h2>But you can make $' + optimals[0] + ' using ' + optimals[1] + ' as your parameter.</h2>')
+//			$('#profit').append('<h2>But you can make $' + optimals[0] + ' using ' + optimals[1] + ' as your parameter.</h2>')
 			var arrs = [lavg, price, havg]
 			var bottom = d3.min(arrs.map(d3.min))
 			var top = d3.max(arrs.map(d3.max))
