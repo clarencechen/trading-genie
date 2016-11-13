@@ -101,20 +101,19 @@ function setUpSocket() {
 							ws.send('loading::Currently analyzing parsed data, please wait.')
 							var LMApointer = Module.SMAlow(low)
 							var HMApointer = Module.SMAhigh(high)
-							var optimalpointer = Module.Optimal(low, high)
 							var lavg = []
 							var havg = []
 							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
 								lavg[i -1] = Module.getValue(LMApointer +8*i, 'double')
 							for(i = 1; i <= Module.getValue(HMApointer, 'double'); i++)
 								havg[i -1] = Module.getValue(HMApointer +8*i, 'double')
-							var optimals = [Module.getValue(optimalpointer, 'i32'), Module.getValue(optimalpointer +4, 'i32')]
-
+						//	var optimals = [Module.getValue(optimalpointer, 'i32'), Module.getValue(optimalpointer +4, 'i32')]
+						//	var optimalpointer = Module.Optimal(low, high)
 							var profit = Module.Net(low)
 							ws.send("lavg::" +JSON.stringify(lavg))
 							ws.send("havg::" +JSON.stringify(havg))
 							ws.send("profit::" +profit.toString())
-							ws.send("optimals::" +JSON.stringify(optimals))
+						//	ws.send("optimals::" +JSON.stringify(optimals))
 							ws.send("loading::Hang on tight, we are almost ready...")
 							ws.send('end')
 							Module.delArr()

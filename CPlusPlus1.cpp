@@ -44,16 +44,15 @@ void combine(double* Price, int index)
 void setLen(const int ArrLen)
 {
 	data = new double[ArrLen + 1];
-	High = new double[ArrLen+ 1];
-    Low = new double[ArrLen + 1];
 	data[0] = (double)ArrLen;
-	High[0] = (double)ArrLen;
-	Low[0] = (double)ArrLen;
 }
 uintptr_t SMAlow(int size1)
 {
+	int length = data[0];
+	Low = new double[length + 1];
 	double sum;
-	for (int i = 1; i <= Low[0]; i ++)
+    Low[0] = length;
+	for (int i = 1; i <= length; i ++)
 	{
 		if (i <= size1)
 		{
@@ -71,8 +70,11 @@ uintptr_t SMAlow(int size1)
 }
 uintptr_t SMAhigh(int size2)
 {
+	int length = data[0];
+	High = new double[length + 1];
 	double sum;
-	for (int i = 1; i <= High[0]; i ++)
+    High[0] = length;
+	for (int i = 1; i <= length; i ++)
 	{
 		if (i <= size2)
 		{
@@ -134,6 +136,7 @@ uintptr_t Optimal(int size2, int size1)
 	int maximum = 0;
 	const int dataPoints = data[0];
 	int optimalBar;
+	//double* FMA = new double[dataPoints];
 	double* FMA = new double[dataPoints];
 
 	//FMA = Plot(data, fastBar,dataPoints);
@@ -142,7 +145,7 @@ uintptr_t Optimal(int size2, int size1)
 	{
 		FMA = reinterpret_cast<double*>(SMAhigh(i));
 		High = FMA;
-		int temp = Net(i);
+		int temp = Net(size1);
 
 		if (temp > maximum)
 		{
@@ -151,7 +154,7 @@ uintptr_t Optimal(int size2, int size1)
 		}
 	}
 
-	optimal = new int[2];
+	int* optimal = new int[2];
 	optimal[0] = maximum;
 	optimal[1] = optimalBar;
 	delete[] FMA;
@@ -160,10 +163,10 @@ uintptr_t Optimal(int size2, int size1)
 }
 void delArr()
 {
-	delete[] optimal;
 	delete[] High;
 	delete[] Low;
 	delete[] data;
+	delete[] optimal;
 }
 //void myFunc(uintptr_t bufAddr, unsigned int size)
 //{
