@@ -1,7 +1,6 @@
 var host = location.origin.replace(/^http/, 'ws')
 var ws = new WebSocket(host);
 $(document).ready(function() {
-	setupSVG();
 	var lavg, havg, price = []
 	var profit
 	var stock = ''
