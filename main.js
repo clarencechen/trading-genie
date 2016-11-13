@@ -70,7 +70,7 @@ function setUpSocket() {
 								totallength = arr.length
 								Module.setLen(arr.length)
 								var j = 0
-								ws.send('loading::Currently nalyzing parsed data, please wait.')
+								ws.send('loading::Currently analyzing parsed data, please wait.')
 								while (arr.length > 0)
 								{
 									for (var i = 0; i <  100; i++) {
