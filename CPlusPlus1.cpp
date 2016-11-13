@@ -142,7 +142,7 @@ uintptr_t Optimal(int size2, int size1)
 	{
 		FMA = reinterpret_cast<double*>(SMAhigh(i));
 		High = FMA;
-		int temp = Net(size1);
+		int temp = Net(i);
 
 		if (temp > maximum)
 		{

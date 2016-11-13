@@ -101,7 +101,7 @@ function setUpSocket() {
 							ws.send('loading::Currently analyzing parsed data, please wait.')
 							var LMApointer = Module.SMAlow(low)
 							var HMApointer = Module.SMAhigh(high)
-							var optimalpointer = Module.Optimal(high, low)
+							var optimalpointer = Module.Optimal(low, high)
 							var lavg = []
 							var havg = []
 							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
