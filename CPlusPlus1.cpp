@@ -151,7 +151,7 @@ uintptr_t Optimal(int size2, int size1)
 		}
 	}
 
-	int* optimal = new int[2];
+	optimal = new int[2];
 	optimal[0] = maximum;
 	optimal[1] = optimalBar;
 	delete[] FMA;
