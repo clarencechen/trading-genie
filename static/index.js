@@ -35,9 +35,9 @@ $(document).ready(function() {
 			var top = d3.max([d3.max(lavg), d3.max(price), d3.max(havg)])
 			console.log(top + ' ' +bottom);
 			$('#charttitle').append('<h2>Strategy results for ' + stock + '</h2>')
-			lavg.forEach(function(e, i) {if(item === 0) lavg[i] = null;});
-			havg.forEach(function(e, i) {if(item === 0) havg[i] = null;});
-			price.forEach(function(e, i) {if(item === 0) price[i] = null;});
+			lavg.forEach(function(e, i) {if(e === 0) lavg[i] = null;});
+			havg.forEach(function(e, i) {if(e === 0) havg[i] = null;});
+			price.forEach(function(e, i) {if(e === 0) price[i] = null;});
 			plot([lavg, price, havg], ["blue", "green", "red"], ["Low Moving Average", "Instantaneous Price", "High Moving Average"], top, bottom);
 		}
 	}
