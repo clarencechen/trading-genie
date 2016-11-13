@@ -106,6 +106,7 @@ function setUpSocket() {
 
 							var lavg, havg = []
 							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
+								console.log(lavg[i])
 								lavg[i -1] = Module.getValue(LMApointer +8*i, 'double')
 							for(i = 1; i <= Module.getValue(HMApointer, 'double'); i++)
 								havg[i -1] = Module.getValue(HMApointer +8*i, 'double')

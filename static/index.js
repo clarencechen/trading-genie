@@ -1,7 +1,7 @@
 var host = location.origin.replace(/^http/, 'ws')
 var ws = new WebSocket(host);
 $(document).ready(function() {
-	var arr = [{},{}]
+	var arr = [{[]},{[]}]
 	var lavg, havg = []
 	var profit
 	$("button#submit").click(submitQuery);
@@ -46,14 +46,14 @@ $(document).ready(function() {
 					})
 				}
 			})
-			arr = [{},{}]
+			arr = [{[]},{[]}]
 		}
 		else
 		{
 			arr.forEach(function(e, which) {
 				for(var stock in e)
 				{
-					e[stock] += +($.parseJSON(event.data)[which][stock])
+					e[stock].push($.parseJSON(event.data)[which][stock])
 				}
 			})
 		}
