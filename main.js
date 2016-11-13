@@ -82,7 +82,7 @@ function setUpSocket() {
 										time[sym][i] = datum.childNamed('EndTime').val
 									}
 									var analys = [price[sym], time[sym]]
-									if(analys.length === 100)
+									if(analys[0].length === 100 && analys[1].length === 100)
 									{
 										var pricepos = Module._malloc(8*analys[0].length)
 										//var timepos = Module._malloc(8*analys[1].length)
