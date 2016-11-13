@@ -4,7 +4,7 @@ var querystring = require('querystring')
 var express = require('express')
 var http = require('http')
 var xmldoc = require("xmldoc")
-var Module = require('./cfuncs.out.js')
+var Module = require('./a.out.js')
 var app = express()
 
 app.use('/', express.static(__dirname+"/static"))
@@ -102,10 +102,16 @@ function setUpSocket() {
 							ws.send('end')
 							LMApointer = Module.SMAlow(low)
 							HMApointer = Module.SMAhigh(high)
-							lavg = []
+							profit = Module.Net(low)
+
+							lavg, havg = []
 							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
 								lavg[i -1] = Module.getValue(LMApointer +8*i, 'double')
+							for(i = 1; i <= Module.getValue(HMApointer, 'double'); i++)
+								havg[i -1] = Module.getValue(HMApointer +8*i, 'double')
 							ws.send("lavg::" +JSON.stringify(lavg))
+							ws.send("havg::" +JSON.stringify(havg))
+							ws.send("profit::" +profit.toString())
 							Module.delArr()
 
 						})

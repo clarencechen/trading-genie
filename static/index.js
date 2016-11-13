@@ -3,6 +3,7 @@ var ws = new WebSocket(host);
 $(document).ready(function() {
 	var arr = [{},{}]
 	var lavg, havg = []
+	var profit
 	$("button#submit").click(submitQuery);
 	$("#comment").keypress(function(e){
 		if(e.which == 13) {
@@ -27,7 +28,15 @@ $(document).ready(function() {
 		{
 			lavg = JSON.parse(event.data.split("::")[1])	
 		}
-		else if(event.data == 'end')
+		else if(event.data.split("::")[0] == 'havg')
+		{
+			havg = JSON.parse(event.data.split("::")[1])	
+		}
+		else if(event.data.split("::")[0] == 'profit')
+		{
+			profit = +(event.data.split("::")[1])
+		}
+		else
 		{
 			arr.forEach(function(e, which) {
 				for(var stock in e)
