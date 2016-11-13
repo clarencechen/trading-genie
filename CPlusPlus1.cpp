@@ -131,10 +131,10 @@ int Net(int size1)
 	}
 	return (int)(totalProfit);
 }
-uintptr_t Optimal(int size2,int size1)
+uintptr_t Optimal(int size2, int size1)
 {
 	int maximum = 0;
-	int dataPoints = data[0];
+	const int dataPoints = data[0];
 	int optimalBar;
 	//double* FMA = new double[dataPoints];
 	double* FMA = new double[dataPoints];
