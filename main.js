@@ -100,8 +100,8 @@ function setUpSocket() {
 								}
 							})
 							ws.send('end')
-							LMApointer = Module.SMAlow(low)
-							HMApointer = Module.SMAhigh(high)
+							var LMApointer = Module.SMAlow(low)
+							var HMApointer = Module.SMAhigh(high)
 							profit = Module.Net(low)
 
 							lavg, havg = []
