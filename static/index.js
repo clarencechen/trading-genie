@@ -46,7 +46,7 @@ $(document).ready(function() {
 					})
 				}
 			})
-			arr = [{[]},{[]}]
+			arr = [{},{}]
 		}
 		else
 		{
