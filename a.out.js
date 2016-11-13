@@ -7098,7 +7098,7 @@ function __Z7SMAhighi($size2) {
  $size2 = $size2|0;
  var $$arith = 0, $$overflow = 0, $0 = 0, $1 = 0, $10 = 0, $11 = 0, $12 = 0, $13 = 0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $18 = 0, $19 = 0, $2 = 0.0, $20 = 0, $21 = 0, $22 = 0, $23 = 0, $24 = 0;
  var $25 = 0, $26 = 0.0, $27 = 0.0, $28 = 0.0, $29 = 0, $3 = 0, $30 = 0, $31 = 0.0, $32 = 0, $33 = 0.0, $34 = 0.0, $35 = 0, $36 = 0, $37 = 0, $38 = 0, $39 = 0, $4 = 0, $40 = 0, $41 = 0, $5 = 0;
- var $6 = 0, $7 = 0, $8 = 0, $9 = 0, $High = 0, $i = 0, $j = 0, $length = 0, $sum = 0.0, label = 0, sp = 0;
+ var $6 = 0, $7 = 0, $8 = 0, $9 = 0, $i = 0, $j = 0, $length = 0, $sum = 0.0, label = 0, sp = 0;
  sp = STACKTOP;
  STACKTOP = STACKTOP + 32|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abort();
  $0 = $size2;
@@ -7112,7 +7112,7 @@ function __Z7SMAhighi($size2) {
  $$overflow = ($5>>>0)>(536870911);
  $6 = $$overflow ? -1 : $$arith;
  $7 = (__Znaj($6)|0);
- $High = $7;
+ HEAP32[464>>2] = $7;
  $i = 0;
  while(1) {
   $8 = $i;
@@ -7126,7 +7126,7 @@ function __Z7SMAhighi($size2) {
   $13 = ($11|0)<($12|0);
   if ($13) {
    $14 = $i;
-   $15 = $High;
+   $15 = HEAP32[464>>2]|0;
    $16 = (($15) + ($14<<3)|0);
    HEAPF64[$16>>3] = 0.0;
   } else {
@@ -7158,7 +7158,7 @@ function __Z7SMAhighi($size2) {
    $33 = (+($32|0));
    $34 = $31 / $33;
    $35 = $i;
-   $36 = $High;
+   $36 = HEAP32[464>>2]|0;
    $37 = (($36) + ($35<<3)|0);
    HEAPF64[$37>>3] = $34;
   }
@@ -7166,7 +7166,7 @@ function __Z7SMAhighi($size2) {
   $39 = (($38) + 1)|0;
   $i = $39;
  }
- $40 = $High;
+ $40 = HEAP32[464>>2]|0;
  $41 = $40;
  STACKTOP = sp;return ($41|0);
 }
@@ -7174,7 +7174,7 @@ function __Z6SMAlowi($size1) {
  $size1 = $size1|0;
  var $$arith = 0, $$overflow = 0, $0 = 0, $1 = 0, $10 = 0, $11 = 0, $12 = 0, $13 = 0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $18 = 0, $19 = 0, $2 = 0.0, $20 = 0, $21 = 0, $22 = 0, $23 = 0, $24 = 0;
  var $25 = 0, $26 = 0.0, $27 = 0.0, $28 = 0.0, $29 = 0, $3 = 0, $30 = 0, $31 = 0.0, $32 = 0, $33 = 0.0, $34 = 0.0, $35 = 0, $36 = 0, $37 = 0, $38 = 0, $39 = 0, $4 = 0, $40 = 0, $41 = 0, $5 = 0;
- var $6 = 0, $7 = 0, $8 = 0, $9 = 0, $Low = 0, $i = 0, $j = 0, $length = 0, $sum = 0.0, label = 0, sp = 0;
+ var $6 = 0, $7 = 0, $8 = 0, $9 = 0, $i = 0, $j = 0, $length = 0, $sum = 0.0, label = 0, sp = 0;
  sp = STACKTOP;
  STACKTOP = STACKTOP + 32|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abort();
  $0 = $size1;
@@ -7188,7 +7188,7 @@ function __Z6SMAlowi($size1) {
  $$overflow = ($5>>>0)>(536870911);
  $6 = $$overflow ? -1 : $$arith;
  $7 = (__Znaj($6)|0);
- $Low = $7;
+ HEAP32[468>>2] = $7;
  $i = 0;
  while(1) {
   $8 = $i;
@@ -7202,7 +7202,7 @@ function __Z6SMAlowi($size1) {
   $13 = ($11|0)<($12|0);
   if ($13) {
    $14 = $i;
-   $15 = $Low;
+   $15 = HEAP32[468>>2]|0;
    $16 = (($15) + ($14<<3)|0);
    HEAPF64[$16>>3] = 0.0;
   } else {
@@ -7234,7 +7234,7 @@ function __Z6SMAlowi($size1) {
    $33 = (+($32|0));
    $34 = $31 / $33;
    $35 = $i;
-   $36 = $Low;
+   $36 = HEAP32[468>>2]|0;
    $37 = (($36) + ($35<<3)|0);
    HEAPF64[$37>>3] = $34;
   }
@@ -7242,7 +7242,7 @@ function __Z6SMAlowi($size1) {
   $39 = (($38) + 1)|0;
   $i = $39;
  }
- $40 = $Low;
+ $40 = HEAP32[468>>2]|0;
  $41 = $40;
  STACKTOP = sp;return ($41|0);
 }
@@ -7273,9 +7273,9 @@ function __Z7Optimalii($size2,$size1) {
  $size1 = $size1|0;
  var $$arith = 0, $$overflow = 0, $0 = 0, $1 = 0, $10 = 0, $11 = 0, $12 = 0, $13 = 0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $18 = 0, $19 = 0, $2 = 0, $20 = 0, $21 = 0, $22 = 0, $23 = 0, $24 = 0;
  var $25 = 0, $26 = 0, $27 = 0, $28 = 0, $29 = 0, $3 = 0.0, $30 = 0, $31 = 0, $32 = 0, $33 = 0, $4 = 0, $5 = 0, $6 = 0, $7 = 0, $8 = 0, $9 = 0, $FMA = 0, $dataPoints = 0, $i = 0, $maximum = 0;
- var $optimal = 0, $optimalBar = 0, $temp = 0, label = 0, sp = 0;
+ var $optimalBar = 0, $temp = 0, label = 0, sp = 0;
  sp = STACKTOP;
- STACKTOP = STACKTOP + 48|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abort();
+ STACKTOP = STACKTOP + 32|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abort();
  $0 = $size2;
  $1 = $size1;
  $maximum = 0;
@@ -7320,23 +7320,23 @@ function __Z7Optimalii($size2,$size1) {
   $i = $23;
  }
  $24 = (__Znaj(8)|0);
- $optimal = $24;
+ HEAP32[476>>2] = $24;
  $25 = $maximum;
- $26 = $optimal;
+ $26 = HEAP32[476>>2]|0;
  HEAP32[$26>>2] = $25;
  $27 = $optimalBar;
- $28 = $optimal;
+ $28 = HEAP32[476>>2]|0;
  $29 = ((($28)) + 4|0);
  HEAP32[$29>>2] = $27;
  $30 = $FMA;
  $31 = ($30|0)==(0|0);
  if ($31) {
-  $32 = $optimal;
+  $32 = HEAP32[476>>2]|0;
   $33 = $32;
   STACKTOP = sp;return ($33|0);
  }
  __ZdaPv($30);
- $32 = $optimal;
+ $32 = HEAP32[476>>2]|0;
  $33 = $32;
  STACKTOP = sp;return ($33|0);
 }
@@ -7399,7 +7399,7 @@ function __ZN10emscripten8functionIvJiEJNS_18allow_raw_pointersEEEEvPKcPFT_DpT0_
 }
 function __Z6setLeni($ArrLen) {
  $ArrLen = $ArrLen|0;
- var $$arith = 0, $$overflow = 0, $0 = 0, $1 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $6 = 0.0, $7 = 0, $data = 0, label = 0, sp = 0;
+ var $$arith = 0, $$overflow = 0, $0 = 0, $1 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $6 = 0.0, $7 = 0, label = 0, sp = 0;
  sp = STACKTOP;
  STACKTOP = STACKTOP + 16|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abort();
  $0 = $ArrLen;
@@ -7409,10 +7409,10 @@ function __Z6setLeni($ArrLen) {
  $$overflow = ($2>>>0)>(536870911);
  $3 = $$overflow ? -1 : $$arith;
  $4 = (__Znaj($3)|0);
- $data = $4;
+ HEAP32[472>>2] = $4;
  $5 = $0;
  $6 = (+($5|0));
- $7 = $data;
+ $7 = HEAP32[472>>2]|0;
  HEAPF64[$7>>3] = $6;
  STACKTOP = sp;return;
 }

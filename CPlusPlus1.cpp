@@ -14,7 +14,7 @@ void delArr();
 double* High;
 double* Low;
 double* data;
-double* optimal;
+int* optimal;
 
 
 EMSCRIPTEN_BINDINGS(raw_pointers)
@@ -43,13 +43,13 @@ void combine(double* Price, int index)
 
 void setLen(const int ArrLen)
 {
-	double* data = new double[ArrLen + 1];
+	data = new double[ArrLen + 1];
 	data[0] = ArrLen;
 }
 uintptr_t SMAlow(int size1)
 {
 	int length = data[0];
-	double* Low = new double[length + 1];
+	Low = new double[length + 1];
 	double sum;
 
 	for (int i = 0; i < length; i ++)
@@ -71,7 +71,7 @@ uintptr_t SMAlow(int size1)
 uintptr_t SMAhigh(int size2)
 {
 	int length = data[0];
-	double* High = new double[length + 1];
+	High = new double[length + 1];
 	double sum;
 
 	for (int i = 0; i < length; i ++)
@@ -154,7 +154,7 @@ uintptr_t Optimal(int size2,int size1)
 		}
 	}
 
-	int* optimal = new int[2];
+	optimal = new int[2];
 	optimal[0] = maximum;
 	optimal[1] = optimalBar;
 	delete[] FMA;
