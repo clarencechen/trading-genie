@@ -117,7 +117,7 @@ function plot(data, colors, names, top, bottom) {
 			.attr("stroke",colors[i])
 			.attr("d", line(data[i]));
 		svg.append("text")
-			.attr("transform", "translate(" + (width+10) + "," + y(data[i][data[i].length-1]-20) + ")")
+			.attr("transform", "translate(" + (width) + "," + y(data[i][data[i].length-1]-20) + ")")
 			.attr("dy", ".35em")
 			.attr("text-anchor", "start")
 			.style("fill", colors[i])
