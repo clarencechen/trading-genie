@@ -102,9 +102,9 @@ function setUpSocket() {
 							ws.send('end')
 							var LMApointer = Module.SMAlow(low)
 							var HMApointer = Module.SMAhigh(high)
-							profit = Module.Net(low)
+							var profit = Module.Net(low)
 
-							lavg, havg = []
+							var lavg, havg = []
 							for(i = 1; i <= Module.getValue(LMApointer, 'double'); i++)
 								lavg[i -1] = Module.getValue(LMApointer +8*i, 'double')
 							for(i = 1; i <= Module.getValue(HMApointer, 'double'); i++)
