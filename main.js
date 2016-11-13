@@ -86,12 +86,13 @@ function setUpSocket() {
 									{
 										var pricepos = Module._malloc(8*analys.length)
 										//var timepos = Module._malloc(8*analys.length)
-										for(var i = 0; i < analys.length; i++)
+										for(var i = 0; i < analys[0].length; i++)
 										{
 											Module.setValue(pricepos +8*i, analys[0][i], 'double')
 											//Module.setValue(timepos +8*i, analys[1][i], 'double')
 										}
 										Module.getInputArr(pricepos, j)
+										Module._free(pricepos)
 										console.log(JSON.stringify(analys))
 									}
 									ws.send(JSON.stringify([price, time]))
@@ -101,9 +102,8 @@ function setUpSocket() {
 								}
 							})
 							ws.send('end')
+
 							var LMApointer = Module.SMAlow(low)
-							console.log('len' +Module.getValue(LMApointer, 'double'))
-							console.log('first' +Module.getValue(LMApointer +8*(low +5), 'double'))
 							var HMApointer = Module.SMAhigh(high)
 							var lavg = []
 							var havg = []
@@ -114,7 +114,7 @@ function setUpSocket() {
 							}
 							for(i = 1; i <= Module.getValue(HMApointer, 'double'); i++)
 								havg[i -1] = Module.getValue(HMApointer +8*i, 'double')
-							
+
 							var profit = Module.Net(low)
 							ws.send("lavg::" +JSON.stringify(lavg))
 							ws.send("havg::" +JSON.stringify(havg))
