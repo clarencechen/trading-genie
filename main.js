@@ -22,7 +22,7 @@ function setUpSocket() {
 	wss.on("connection", function(ws) {
 		console.log("websocket connection open")
 		ws.on("message", function(data) {//data from webpage
-			console.log('received data')
+			ws.send('loading::Server has received data, please wait.')
 			var stuff = JSON.parse(data.split("::")[1])
 			switch (data.split("::")[0]) {
 				case "quote":
@@ -47,20 +47,19 @@ function setUpSocket() {
 					}
 					function callback(response) {
 						var str = ""
-					    console.log("In callback")
+					    ws.send("loading::Receiving data from API in chunks, please wait.")
 						response.on("data", function (chunk) {
 							str += chunk
 						})
 						response.on("end", function () {
-							console.log("data received from api")
+							ws.send("loading::Need to parse data received from api")
 							var price = {}
 							var time = {}
 							var info = new xmldoc.XmlDocument(str)
-							console.log('parsed')
 							info.eachChild(function (stock) {
 								if(stock.childNamed('Outcome').val == "RequestError")
 								{
-									console.log(stock.childNamed('Message').val)
+									ws.send(sloading::tock.childNamed('Message').val)
 									return;
 								}
 								var sym = stock.childNamed('Symbol').val
@@ -71,9 +70,9 @@ function setUpSocket() {
 								totallength = arr.length
 								Module.setLen(arr.length)
 								var j = 0
+								ws.send('loading::Currently nalyzing parsed data, please wait.')
 								while (arr.length > 0)
 								{
-									console.log(arr.length)
 									for (var i = 0; i <  100; i++) {
 										datum = arr.splice(0, 1)[0]
 										if(!datum)
@@ -108,17 +107,19 @@ function setUpSocket() {
 								lavg[i -1] = Module.getValue(LMApointer +8*i, 'double')
 							for(i = 1; i <= Module.getValue(HMApointer, 'double'); i++)
 								havg[i -1] = Module.getValue(HMApointer +8*i, 'double')
+							var optimals = [Module.getValue(Module.Optimal(high, low), 'double'), Module.getValue(Module.Optimal(high, low) +8, 'double')]
 							var profit = Module.Net(low)
 							ws.send("lavg::" +JSON.stringify(lavg))
 							ws.send("havg::" +JSON.stringify(havg))
 							ws.send("profit::" +profit.toString())
+							ws.send("optimals::" +JSON.stringify(optimals))
 							Module.delArr()
 
 							ws.send('end')
 						})
 					}
 					var req = http.request(options, callback)
-					console.log('about to call nasdaq api')
+					ws.send('loading::Calling API, please wait.')
 					req.end(data, 'utf8', function() {console.log('called api')})
 					break
 				}

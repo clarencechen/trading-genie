@@ -23,19 +23,23 @@ $(document).ready(function() {
 		else if(event.data.split("::")[0] == 'havg')
 			havg = JSON.parse(event.data.split("::")[1])
 		else if(event.data.split("::")[0] == 'profit')
-		{
 			profit = +(event.data.split("::")[1]);
-			$('#profit').append('<h2>Total Profit: ' + profit + '</h2>')
-		}
+		else if(event.data.split("::")[0] == 'optimals')
+			optimals = [JSON.parse(event.data.split("::")[1])[0], JSON.parse(event.data.split("::")[1])[1]];
 		else if(event.data.split("::")[0] == 'price')
 			$.extend(price, JSON.parse(event.data.split("::")[1]))
+		else if (event.data.split("::")[0] == 'loading')
+			$('#charttitle').html('<h2>' + event.data.split("::")[1] + '</h2>')
 		else if(event.data = 'end')
 		{
-			var bottom = d3.min([d3.min(lavg), d3.min(price), d3.min(havg)])
-			var top = d3.max([d3.max(lavg), d3.max(price), d3.max(havg)])
+			$('#charttitle').html('<h2>Strategy results for ' + stock + '</h2>')
+			$('#profit').append('<h2>Current Total Profit: $' + profit + '</h2>')
+			$('#profit').append('<h2>But you can make $' + optimals[0] + ' using ' + optimals[1]' as your parameter.</h2>')
+			var arrs = [lavg, price, havg]
+			var bottom = d3.min(arrs.map(d3.min))
+			var top = d3.max(arrs.map(d3.max))
 			console.log(top + ' ' +bottom);
-			$('#charttitle').append('<h2>Strategy results for ' + stock + '</h2>')
-			plot([lavg, price, havg], ["blue", "green", "red"], ["Low Moving Average", "Instantaneous Price", "High Moving Average"], top, bottom);
+			plot(arrs, ["blue", "green", "red"], ["Low Moving Average", "Instantaneous Price", "High Moving Average"], top, bottom);
 		}
 	}
 })
