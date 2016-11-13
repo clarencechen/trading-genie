@@ -53,7 +53,7 @@ $(document).ready(function() {
 			arr.forEach(function(e, which) {
 				for(var stock in e)
 				{
-					e[stock] += JSON.parse(event.data)[which][stock]
+					e[stock] += $.parseJSON(event.data)[which][stock]
 				}
 			})
 		}
