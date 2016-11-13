@@ -27,7 +27,7 @@ $(document).ready(function() {
 		else if(event.data.split("::")[0] == 'optimals')
 			optimals = [JSON.parse(event.data.split("::")[1])[0], JSON.parse(event.data.split("::")[1])[1]];
 		else if(event.data.split("::")[0] == 'price')
-			$.extend(price, JSON.parse(event.data.split("::")[1]))
+			price = price.concat(JSON.parse(event.data.split("::")[1]))
 		else if (event.data.split("::")[0] == 'loading')
 		{
 			console.log(event.data.split("::")[1])
