@@ -115,10 +115,8 @@ function setUpSocket() {
 							ws.send("havg::" +JSON.stringify(havg))
 							ws.send("profit::" +profit.toString())
 							ws.send("optimals::" +JSON.stringify(optimals))
+							ws.send("loading::Hang on tight, we are almost ready...")
 							Module.delArr()
-							Module._free(LMApointer)
-							Module._free(HMApointer)
-							Module._free(optimalpointer)
 							ws.send('end')
 						})
 					}
