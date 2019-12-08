@@ -61,7 +61,7 @@ function setUpSocket() {
 							var time = {}
 							var info = new xmldoc.XmlDocument(str)
 							info.eachChild(function (stock) {
-								if(stock.childNamed('Outcome').val == "RequestError")
+								if(stock.childNamed('Outcome').val === "RequestError")
 								{
 									ws.send('loading::' + stock.childNamed('Message').val)
 									return;
